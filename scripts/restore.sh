@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source ./preSetup.sh;
-source ./appsSetup.sh;
+source $baseDir/scripts/preSetup.sh;
+source $baseDir/scripts/appsSetup.sh;
 
 
 for key in $(jq ".apps | keys | .[]" $baseDir/lists/appsList.json); do
@@ -96,7 +96,7 @@ if dialog --defaultno --yesno 'Do you want to install nvidia drivers?' 10 30 --o
     grub-update;
 fi
 
-source ./scripts/miscSetup.sh;
+source $baseDir/scripts/miscSetup.sh;
 
 
 for file in "${configFiles[@]}"; do
@@ -104,4 +104,4 @@ for file in "${configFiles[@]}"; do
     cp -r --parents "$file" "$HOME/$file" 
 done
 
-source ./scripts/postSetup.sh;
+source $baseDir/scripts/postSetup.sh;
