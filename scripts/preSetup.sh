@@ -1,6 +1,6 @@
 #!/bin/bash
 
-updatedb; #update locate database
+sudo updatedb; #update locate database
 #pre-setup
 echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/$USER; #allow current use executing sudo without passhord
 mkdir temp; #
