@@ -1,0 +1,25 @@
+[Added Associations]
+application/octet-stream=org.kde.kate.desktop;
+audio/mpeg=smplayer.desktop;
+inode/directory=org.kde.dolphin.desktop;
+text/plain=org.kde.kate.desktop;
+video/mp4=smplayer.desktop;
+video/ogg=mpv.desktop;
+video/x-matroska=smplayer.desktop;
+x-content/ebook-reader=com.github.johnfactotum.Foliate.desktop;
+
+[Default Applications]
+application/octet-stream=org.kde.kate.desktop;
+audio/mpeg=smplayer.desktop;
+inode/directory=org.kde.dolphin.desktop;
+text/html=chromium-browser-privacy.desktop
+text/plain=org.kde.kate.desktop;
+video/mp4=smplayer.desktop;
+video/ogg=mpv.desktop;
+video/x-matroska=smplayer.desktop;
+x-content/ebook-reader=com.github.johnfactotum.Foliate.desktop;
+x-scheme-handler/gitkraken=gitkraken_gitkraken-url-handler.desktop
+x-scheme-handler/http=opera.desktop;
+x-scheme-handler/https=opera.desktop;
+x-scheme-handler/slack=slack_slack.desktop
+x-scheme-handler/kite=kite-copilot.desktop

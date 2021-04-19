@@ -1,0 +1,80 @@
+conky.config = {
+    use_xft = true,
+    
+    update_interval = 1,
+    
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_argb_visual = true,
+    own_window_argb_value = 10,
+    own_window_hints = 'undecorated,below,skip_taskbar,sticky,skip_pager',
+    own_window_colour = '000000',
+    double_buffer = true,
+    
+    top_name_width = 10,
+    minimum_width = 190,
+    maximum_width = 190,
+    
+    draw_borders = false,
+    draw_outline = false,
+    draw_shades = false,
+    draw_graph_borders = false,
+    
+    default_color = '#DEE2E6',
+    alignment = 'middle_right',
+    xinerama_head = 2,
+    cpu_avg_samples = 2,
+    override_utf8_locale = true,
+    
+    gap_y = 25,
+    gap_x = 10,
+    
+    color1 = '#ADB5BD',
+    color2 = '#F8F9FA',
+    font = 'Open Sans:size=10',
+};
+
+conky.text = [[
+$color1${font size=14:bold}System $font${hr 2}$color
+${voffset 10}OS: $alignr${exec lsb_release -a | grep 'Description\|Release' | tr '\n' ' ' | awk '{print $2" "$3" "$4}'}
+Kernel: $alignr$kernel
+Uptime $font $alignr $uptime_short
+Governor: ${alignr}${execi 1 cut -b 1-20 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor}${color}
+Temp$font$alignr${acpitemp}$color°C
+$color1
+cpu ${font} $cpu% ${execi 1 sensors | grep 'temp1' | cut -c16-17}°C ${alignr}${freq_g cpu0}GHz
+${cpubar 4,190}
+${voffset 5}ram$font${alignr}$mem / $memmax
+${membar 4,190}
+${voffset 7}/ $font ${execi 1 sensors | grep 'Composite' | cut -c16-17 | head -n 1}°C $font${alignr}${fs_used /} / ${fs_size /}
+${fs_bar 4,190 /}
+${voffset 7}/home $font ${execi 1 sensors | grep 'Composite' | cut -c16-17 | tail -n 1}°C $font${alignr}${fs_used /home} / ${fs_size /home}
+${fs_bar 4,190 /home}
+${voffset 7}battery ${battery_percent BAT1}% ${alignr}${battery_time BAT1}
+${battery_bar 4,190 BAT1}
+GPU ${execi 10 nvidia-smi --format=csv,noheader,nounits --query-gpu=temperature.gpu}°C ${alignr} ${execi 10 nvidia-settings -q [gpu:0]/UsedDedicatedGPUMemory -t}/${exec nvidia-settings -q [gpu:0]/TotalDedicatedGPUMemory -t} MB
+${execbar nvidia-settings -tq GPUUtilization | grep -o 'graphics=[0-9]*' | sed -e 's/graphics=//'}
+
+$color1${font DejaVu Sans:size=14:bold}Activity $font ${hr 2}$color
+${voffset 5}
+${font DejaVu Sans:size=10:bold}Top CPU$font ${goto 110}${font DejaVu Sans:size=9}CPU%   MEM%$font
+${top name 1}${goto 105}${top cpu 1}${goto 155}${top mem 1}
+${top name 2}${goto 105}${top cpu 2}${goto 155}${top mem 2}
+${top name 3}${goto 105}${top cpu 3}${goto 155}${top mem 3}
+${voffset 5}
+${font DejaVu Sans:size=10:bold}Top RAM$font${goto 110}${font DejaVu Sans:size=9}CPU%   MEM%$font
+${top_mem name 1}${goto 105}${top_mem cpu 1}${goto 155}${top_mem mem 1}
+${top_mem name 2}${goto 105}${top_mem cpu 2}${goto 155}${top_mem mem 2}
+${top_mem name 3}${goto 105}${top_mem cpu 3}${goto 155}${top_mem mem 3}
+
+${voffset 2}#
+$color1${font DejaVu Sans:size=14:bold}Network $font ${hr 2}$color
+${voffset 2}#
+${voffset 5}upload speed: $alignr${upspeed $gw_iface}
+${voffset 5}download speed: $alignr${downspeed $gw_iface}
+${voffset 5}total uploaded: $alignr${totalup $gw_iface}
+${voffset 5}total dowloaded: $alignr${totaldown $gw_iface}
+${voffset 5}local ip: ${alignr}${addrs $gw_iface}
+${voffset 5}global ip: ${alignr}${curl ipinfo.io/ip 2}
+
+]];

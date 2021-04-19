@@ -1,0 +1,55 @@
+[ActionsWidget]
+ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAekAAAACAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAACAAAA+gAAAAEAAAAAAAAA7wAAAAEAAAAAAAAD6AAAAABk
+
+[ConfigDialog]
+HDMI-A-0 eDP Height 1080=505
+HDMI-A-0 eDP Width 1920=716
+Height 1080=483
+Width 1920=623
+eDP Height 1920x1080=505
+eDP Width 1920x1080=716
+
+[General]
+Number of Actions=0
+
+[KFileDialog Settings]
+Recent Files[$e]=1chadweisser-rainydaymanhattan.jpg,file:$HOME/.local/share/wallpapers/groovy_leaf.jpg,file:///media/data/wallpapers/22558727650_f158b88113_h.jpg,file:///media/data/wallpapers/38726662-ambient-wallpapers.jpg,file:///media/data/wallpapers/221297.png,file:///media/data/wallpapers/19-06-10.jpg,file:///media/data/wallpapers/11_cameronbashaw_webbed.jpg,file:///media/data/wallpapers/10_marknelson_stepssnow_b.jpg,file:///media/data/wallpapers/9olgagórka-oldtownparis.jpg,file:///media/data/wallpapers/9jaq6hz5iib41.png
+Recent URLs[$e]=file:///media/data/wallpapers/,file:$HOME/Downloads/,file:$HOME/,file:$HOME/Documents/,file:///media/data/workplace/DotFiles/assets/,file:$HOME/.local/share/wallpapers/
+detailViewIconSize=0
+iconViewIconSize=43
+
+[KPropertiesDialog]
+HDMI-A-0 eDP Height 1080=446
+HDMI-A-0 eDP Height 1920x1080=446
+HDMI-A-0 eDP Width 1920=1185
+HDMI-A-0 eDP Width 1920x1080=417
+
+[Notification Messages]
+really_clear_history=true
+
+[Open-with settings]
+CompletionMode=1
+History=bles
+
+[PlasmaRunnerManager]
+LaunchCounts=1 services_applications:devinfo.desktop,6 services_applications:autostart.desktop,4 services_applications:xyz.z3ntu.razergenie.desktop,1 services_applications:net.lutris.Lutris.desktop,1 services_applications:kite.desktop,3 services_applications:org.kde.kate.desktop,1 services_applications:org.kde.kmines.desktop,7 services_applications:discord.desktop,1 services_applications:kcm_touchpad.desktop,9 services_applications:vmware-player.desktop,4 services_applications:firefox.desktop,2 services_applications:bitwarden_bitwarden.desktop,1 services_applications:com.nextcloud.desktopclient.nextcloud.desktop,13 services_applications:org.kde.kcalc.desktop,1 services_applications:chromium-browser-privacy.desktop,9 services_applications:kvantummanager.desktop,2 services_applications:org.kde.dragonplayer.desktop,2 services_applications:org.kde.plasma.emojier.desktop,4 services_applications:slack.desktop,12 services_applications:smplayer.desktop,2 services_applications:fontinst.desktop,12 services_applications:nvidia-settings.desktop,3 services_applications:org.kde.falkon.desktop,1 services_applications:The Witcher 3 Wild Hunt.desktop,2 services_applications:Zoom.desktop,2 services_applications:simplescreenrecorder.desktop,2 services_applications:componentchooser.desktop,3 services_applications:org.mageia.dnfdragora.desktop,4 services_applications:zoom-client_zoom-client.desktop,2 services_applications:org.kde.partitionmanager.desktop,1 services_applications:com.github.needleandthread.vocal.desktop?action=AboutDialog,2 services_applications:polychromatic-controller.desktop,1 services_applications:org.keepassxc.KeePassXC.desktop,1 services_applications:kcm_fonts.desktop,3 services_applications:mailspring_mailspring.desktop,3 services_applications:steam.desktop,10 services_applications:org.kde.konsole.desktop,8 services_applications:grub-customizer.desktop,2 services_applications:vlc.desktop,1 services_applications:virtualbox.desktop,2 services_applications:de.haeckerfelix.Shortwave.desktop,1 services_applications:brave-browser.desktop,2 services_applications:gitkraken_gitkraken.desktop,1 services_applications:uget-gtk.desktop,1 services_applications:com.rafaelmardojai.Blanket.desktop,1 services_applications:strimio-desktop_strimio-desktop.desktop,3 services_applications:org.kde.krusader.desktop,1 services_applications:org.gnome.Podcasts.desktop,2 services_applications:org.kde.kdenlive.desktop,1 services_applications:skypeforlinux.desktop,3 services_applications:opera.desktop,1 services_applications:com.github.needleandthread.vocal.desktop,11 services_applications:org.rnd2.cpupower_gui.desktop,12 services_applications:org.kde.discover.desktop,2 services_applications:firewall-config.desktop,2 services_applications:com.github.persepolisdm.persepolis.desktop,1 services_applications:com.github.Eloston.UngoogledChromium.desktop,1 services_applications:kcm_keys.desktop,8 services_applications:org.joplinapp.joplin.desktop,1 services_applications:slack_slack.desktop,1 services_applications:org.kde.krename.desktop,2 services_applications:org.kde.spectacle.desktop,2 services_applications:virt-manager.desktop,1 services_applications:kcm_kscreen.desktop
+
+[PlasmaViews][Panel 27][Defaults]
+thickness=38
+
+[PlasmaViews][Panel 27][Horizontal1920]
+thickness=38
+
+[PlasmaViews][Panel 3][Defaults]
+thickness=32
+
+[PlasmaViews][Panel 3][Horizontal1920]
+thickness=32
+
+[ScreenConnectors]
+0=HDMI-A-0
+1=eDP
+2=:0.0
+
+[Updates]
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/00-start-here-2.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/unlock_widgets.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/maintain_existing_desktop_icon_sizes.js

@@ -1,0 +1,160 @@
+{
+  "apps": [
+    {
+      "app": "heroku",
+      "description": "cli tool for heroku",
+      "state": "off",
+      "source": "snapClassic"
+    },
+    {
+      "app": "postman",
+      "description": "api development tool",
+      "state": "off",
+      "source": "snapClassic"
+    },
+    {
+      "app": "intellij-idea-community",
+      "description": "java ide",
+      "state": "off",
+      "source": "snapClassic"
+    },
+    {
+      "app": "dbeaver-ce",
+      "description": "open-source database ide",
+      "state": "off",
+      "source": "snapClassic"
+    },
+    {
+      "app": "slack",
+      "description": "enterprise communcation app",
+      "state": "off",
+      "source": "snapClassic"
+    },
+    {
+      "app": "podcasts",
+      "description": "podcast player",
+      "state": "off",
+      "source": "flatpak",
+      "package": "org.gnome.Podcasts"
+    },
+    {
+      "app": "authenticator",
+      "description": "two factor authenticator",
+      "state": "off",
+      "source": "flatpak",
+      "package": "com.belmoussaoui.Authenticator"
+    },
+    {
+      "app": "foliate",
+      "description": "ebook reader",
+      "state": "off",
+      "source": "flatpak",
+      "package": "fedora com.github.johnfactotum.Foliate"
+    },
+    {
+      "app": "smplayer",
+      "description": "sane customizable video player",
+      "state": "off",
+      "source": "dnf",
+      "package": "smplayer smplayer-themes"
+    },
+    {
+      "app": "zoom",
+      "description": "video meeting platform",
+      "state": "off",
+      "source": "script",
+      "script": "installZoom"
+    },
+    {
+      "app": "java",
+      "description": "sdkman, springboot, maven, gradle, tomcat",
+      "state": "on",
+      "source": "script",
+      "script": "installJava"
+    },
+    {
+      "app": "vscode",
+      "description": "code editor",
+      "state": "off",
+      "source": "script",
+      "script": "installVscode"
+    },
+    {
+      "app": "remmina",
+      "description": "remote desktop client",
+      "state": "off",
+      "source": "dnf"
+    },
+    {
+      "app": "steam",
+      "description": "gaming platform",
+      "state": "off",
+      "source": "dnf"
+    },
+    {
+      "app": "kdenlive",
+      "description": "video editing",
+      "state": "off",
+      "source": "dnf"
+    },
+    {
+      "app": "kitty",
+      "description": "gpu accelerated, fast terminal",
+      "state": "off",
+      "source": "dnf"
+    },
+    {
+      "app": "zsh",
+      "description": "set customized zsh as default shell",
+      "state": "off",
+      "source": "script",
+      "script": "installZsh"
+    },
+    {
+      "app": "tidal-dl",
+      "description": "download music from tidal",
+      "state": "off",
+      "source": "script",
+      "script": "installTidalDl"
+    },
+    {
+      "app": "keepassxcd",
+      "description": "open-source password manager",
+      "state": "off",
+      "source": "dnf"
+    },
+    {
+      "app": "gzdoom",
+      "description": "engine for playing classic doom wads",
+      "state": "on",
+      "source": "dnf",
+      "repo": "nalika/gzdoom"
+    },
+    {
+      "app": "conky",
+      "description": "boomer style monitoring",
+      "state": "on",
+      "source": "dnf"
+    },
+    {
+      "app": "joplin",
+      "description": "open source note taking app",
+      "state": "off",
+      "source": "script",
+      "repo": "taw/joplin"
+    },
+    {
+      "app": "nextcloud",
+      "description": "self-hosted cloud solution",
+      "state": "off",
+      "package": "nextcloud nextcloud-client nextcloud-client-dolphin",
+      "source": "dnf"
+    },
+    {
+      "app": "virtualbox",
+      "description": "virtual machine",
+      "source": "dnf",
+      "state": "off"
+    }
+  ]
+}

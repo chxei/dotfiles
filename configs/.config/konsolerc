@@ -1,0 +1,28 @@
+[Desktop Entry]
+DefaultProfile=default.profile
+
+[Favorite Profiles]
+Favorites=
+
+[MainWindow]
+HDMI-A-0 eDP Height 1080=690
+HDMI-A-0 eDP Height 1920x1080=1008
+HDMI-A-0 eDP Width 1920=1176
+HDMI-A-0 eDP Width 1920x1080=1920
+HDMI-A-0 eDP Window-Maximized 1920x1080=true
+HDMI-A-0 eDP XPosition=2290
+HDMI-A-0 eDP XPosition 1920x1080=1920
+HDMI-A-0 eDP YPosition=84
+HDMI-A-0 eDP YPosition 1920x1080=34
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAPTAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+eDP Height 1920x1080=1008
+eDP Width 1920x1080=1920
+eDP Window-Maximized 1920x1080=true
+eDP XPosition=382
+eDP XPosition 1920x1080=0
+eDP YPosition=468
+eDP YPosition 1920x1080=34
+
+[TabBar]
+NewTabButton=true

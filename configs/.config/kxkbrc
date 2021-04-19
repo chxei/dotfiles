@@ -1,0 +1,13 @@
+[Layout]
+DisplayNames=,
+LayoutList=us,ge
+LayoutLoopCount=-1
+Model=pc86
+Options=grp:win_space_toggle
+ResetOldOptions=true
+ShowFlag=false
+ShowLabel=true
+ShowLayoutIndicator=true
+ShowSingle=false
+SwitchMode=WinClass
+Use=true
