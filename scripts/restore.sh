@@ -5,7 +5,7 @@ source $baseDir/scripts/appsSetup.sh;
 
 
 for key in $(jq ".apps | keys | .[]" $baseDir/appsList.json); do
-    value=$(jq --raw-output ".apps[$key]" $baseDir/lists/appsList.json);
+    value=$(jq --raw-output ".apps[$key]" $baseDir/appsList.json);
     app=$(jq --raw-output  ".app" <<< $value);
     description=$(jq  --raw-output ".description" <<< $value);
     state=$(jq --raw-output ".state" <<< $value);
@@ -17,7 +17,7 @@ apps=$(eval dialog --no-tags --checklist \'Choose which apps do you want to use\
 cat <<< $(jq '.apps[].state = "off"' $baseDir/appsList.json) > $baseDir/lists/appsList.json
 for key in $apps
 do
-    cat <<< $(jq ".apps[$key].state = \"on\"" $baseDir/appsList.json) > $baseDir/lists/appsList.json;
+    cat <<< $(jq ".apps[$key].state = \"on\"" $baseDir/appsList.json) > $baseDir/appsList.json;
 done
 
 for key in $(jq '.[] | map(select(.state == "on")) | keys | .[]' $baseDir/appsList.json); do
@@ -95,6 +95,8 @@ if dialog --defaultno --yesno 'Do you want to install nvidia drivers?' 10 30 --o
     sudo grubby --update-kernel=ALL --args='nvidia-drm.modeset=1';
     grub-update;
 fi
+
+clear;
 
 source $baseDir/scripts/miscSetup.sh;
 

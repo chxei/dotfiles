@@ -14,6 +14,8 @@ action=$(dialog --no-items --radiolist 'do you want to backup or restore' 11 30 
 'restore' 'off' \
 --output-fd 1);
 
+clear;
+
 if [[ $action == 'backup' ]]; then
     cd ~;
     #remove history of smplayer
