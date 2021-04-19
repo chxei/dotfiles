@@ -23,5 +23,5 @@ if [[ $action == 'backup' ]]; then
         cp -r --parents "$file" "$baseDir/configs/"
     done
 elif [[ $action == 'restore' ]]; then
-    source ./scripts/restore.sh;
+    source $baseDir/scripts/restore.sh;
 fi

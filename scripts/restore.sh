@@ -4,7 +4,7 @@ source $baseDir/scripts/preSetup.sh;
 source $baseDir/scripts/appsSetup.sh;
 
 
-for key in $(jq ".apps | keys | .[]" $baseDir/lists/appsList.json); do
+for key in $(jq ".apps | keys | .[]" $baseDir/appsList.json); do
     value=$(jq --raw-output ".apps[$key]" $baseDir/lists/appsList.json);
     app=$(jq --raw-output  ".app" <<< $value);
     description=$(jq  --raw-output ".description" <<< $value);
@@ -14,14 +14,14 @@ done
 
 apps=$(eval dialog --no-tags --checklist \'Choose which apps do you want to use\' 35 100 35 $appsString --output-fd 1);
 
-cat <<< $(jq '.apps[].state = "off"' $baseDir/lists/appsList.json) > $baseDir/lists/appsList.json
+cat <<< $(jq '.apps[].state = "off"' $baseDir/appsList.json) > $baseDir/lists/appsList.json
 for key in $apps
 do
-    cat <<< $(jq ".apps[$key].state = \"on\"" $baseDir/lists/appsList.json) > $baseDir/lists/appsList.json;
+    cat <<< $(jq ".apps[$key].state = \"on\"" $baseDir/appsList.json) > $baseDir/lists/appsList.json;
 done
 
-for key in $(jq '.[] | map(select(.state == "on")) | keys | .[]' $baseDir/lists/appsList.json); do
-    value=$(jq ".[] | map(select(.state == \"on\")) | .[$key]" $baseDir/lists/appsList.json); 
+for key in $(jq '.[] | map(select(.state == "on")) | keys | .[]' $baseDir/appsList.json); do
+    value=$(jq ".[] | map(select(.state == \"on\")) | .[$key]" $baseDir/appsList.json); 
     app=$(jq --raw-output  ".app" <<< $value);
     description=$(jq  --raw-output ".description" <<< $value);
     state=$(jq --raw-output ".state" <<< $value);
@@ -101,7 +101,7 @@ source $baseDir/scripts/miscSetup.sh;
 
 for file in "${configFiles[@]}"; do
     cd "$baseDir/configs/";
-    cp -r --parents "$file" "$HOME/$file" 
+    cp -r --parents "$file" "$HOME" 
 done
 
 source $baseDir/scripts/postSetup.sh;

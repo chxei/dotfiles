@@ -96,13 +96,10 @@ case $browser in
         sudo cp libffmpeg.so /usr/lib64/opera/lib_extra/libffmpeg.so;
         cd ~;;
     ungoogled-chromium)
-        #chromium-privacy
         sudo dnf install chromium-browser-privacy;;
     chrome)
         sudo dnf config-manager --set-enabled google-chrome;
         sudo dnf install google-chrome-stable -y;;
     firefox)
-        #firefox
-        echo 'installing firefox';
         sudo dnf install firefox;;
 esac;
