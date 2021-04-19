@@ -140,7 +140,7 @@
       "app": "joplin",
       "description": "open source note taking app",
       "state": "off",
-      "source": "script",
+      "source": "dnf",
       "repo": "taw/joplin"
     },
     {

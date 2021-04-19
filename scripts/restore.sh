@@ -14,7 +14,7 @@ done
 
 apps=$(eval dialog --no-tags --checklist \'Choose which apps do you want to use\' 35 100 35 $appsString --output-fd 1);
 
-cat <<< $(jq '.apps[].state = "off"' $baseDir/appsList.json) > $baseDir/lists/appsList.json
+cat <<< $(jq '.apps[].state = "off"' $baseDir/appsList.json) > $baseDir/appsList.json
 for key in $apps
 do
     cat <<< $(jq ".apps[$key].state = \"on\"" $baseDir/appsList.json) > $baseDir/appsList.json;
@@ -100,10 +100,5 @@ clear;
 
 source $baseDir/scripts/miscSetup.sh;
 
-
-for file in "${configFiles[@]}"; do
-    cd "$baseDir/configs/";
-    cp -r --parents "$file" "$HOME" 
-done
 
 source $baseDir/scripts/postSetup.sh;
