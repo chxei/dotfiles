@@ -25,7 +25,7 @@ installZsh(){
     git config --global alias.ll 'log --graph --format="%C(yellow)%h%C(red)%d%C(reset) - %C(bold green)(%ar)%C(reset) %s %C(blue)<%an>%C(reset)"'
     #remove default configs
     rm -rf ~/.zshrc;
-    rm -rf /root/.zshrc;
+    sudo rm -rf /root/.zshrc;
     #restore saved .zshrc
     sudo cp $baseDir/home/.zshrc ~/.zshrc;
     #make same config for root. copy because cross partition symlinks are not available
