@@ -63,7 +63,7 @@ case $browser in
         sudo dnf upgrade -y --refresh;
         sudo dnf install opera-stable -y;
         cd ~/temp;
-        sudo mkdir /usr/lib64/opera/lib_extra;
+        sudo mkdir /usr/lib64/opera/lib_extra -p;
         latestffmpegversion=$(git ls-remote --tags https://github.com/iteufel/nwjs-ffmpeg-prebuilt.git | tail -n 1 | cut -d/ -f3-);
         wget -qo - https://github.com/iteufel/nwjs-ffmpeg-prebuilt/releases/download/$latestffmpegversion/$latestffmpegversion-linux-x64.zip;
         unzip $latestffmpegversion-linux-x64.zip;

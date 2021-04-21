@@ -31,7 +31,7 @@ sudo snap set system refresh.retain=2; #allow only 2 older versions of snaps. th
 
 #flatpacks
 sudo dnf install flatpak -y;
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo -y; #flathub repositorie
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo; #flathub repositorie
 
 #optimizations
 echo 'CPUPOWER_START_OPTS="frequency-set -g schedutil"\nCPUPOWER_STOP_OPTS="frequency-set -g schedutil"' | sudo tee /etc/sysconfig/cpupower; #set default governor to schedutil
