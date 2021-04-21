@@ -10,7 +10,7 @@ installZsh(){
     mv ~/go/bin/cod ~/.local/bin
     #download some cool zsh plugins
     mkdir .local/bin/zsh_plugins -p;
-    cd .local/bin/zsh_plugins;
+    cd ~/.local/bin/zsh_plugins;
     git clone https://github.com/denysdovhan/spaceship-prompt.git;
     git clone https://github.com/skywind3000/z.lua.git;
     git clone https://github.com/zsh-users/zsh-autosuggestions.git;
