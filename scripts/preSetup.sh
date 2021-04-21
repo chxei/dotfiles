@@ -22,7 +22,7 @@ sudo dnf install fedora-workstation-repositories -y;
 sudo dnf group install multimedia sound-and-video "Development Tools" "Development Libraries" -y;
 
 #some usefull apps
-sudo dnf install falkon plasma-browser-integration fwupd htop git neofetch jetbrains-mono-fonts-all fira-code-fonts simplescreenrecorder dnf-plugins-core go redhat-lsb-core lm_sensors kate ffmpeg kernel-tools -y;
+sudo dnf install falkon plasma-browser-integration fwupd htop git neofetch jetbrains-mono-fonts-all fira-code-fonts simplescreenrecorder dnf-plugins-core go redhat-lsb-core lm_sensors kate ffmpeg kernel-tools ktorrent -y;
 
 #snaps
 sudo dnf install snapd -y;

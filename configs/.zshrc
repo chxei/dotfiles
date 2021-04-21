@@ -178,7 +178,6 @@ source $ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH_PLUGINS/command-not-found.plugin.zsh
 source $ZSH_PLUGINS/common-aliases.plugin.zsh
 source $ZSH_PLUGINS/bgnotify.plugin.zsh
-source $ZSH_PLUGINS/dotenv.plugin.zsh
 source $ZSH_PLUGINS/extract.plugin.zsh
 eval "$(lua $ZSH_PLUGINS/z.lua/z.lua --init zsh enhanced once fzf)"
 source <(cod init $$ zsh)

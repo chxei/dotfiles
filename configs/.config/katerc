@@ -125,7 +125,7 @@ Word Completion Remove Tail=true
 
 [KTextEditor::Search]
 Replace History=.config
-Search History=preb,cod,play,sections,src,gll,/dev/nvme0n1p1,conky,intel,$configFolder
+Search History=file,preb,cod,play,sections,src,gll,/dev/nvme0n1p1,conky,intel,$configFolder
 
 [Konsole]
 AutoSyncronize=true

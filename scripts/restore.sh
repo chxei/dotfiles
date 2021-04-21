@@ -20,34 +20,6 @@ do
     cat <<< $(jq ".apps[$key].state = \"on\"" $baseDir/appsList.json) > $baseDir/appsList.json;
 done
 
-for key in $(jq '.[] | map(select(.state == "on")) | keys | .[]' $baseDir/appsList.json); do
-    value=$(jq ".[] | map(select(.state == \"on\")) | .[$key]" $baseDir/appsList.json); 
-    app=$(jq --raw-output  ".app" <<< $value);
-    description=$(jq  --raw-output ".description" <<< $value);
-    state=$(jq --raw-output ".state" <<< $value);
-    source=$(jq --raw-output ".source" <<< $value);
-    script=$(jq --raw-output ".script?" <<< $value);
-    repo=$(jq --raw-output ".repo?" <<< $value);
-    package=$(jq --raw-output ".package?" <<< $value);
-    if [[ $package == 'null' ]]; then
-        package=$app;
-    fi;
-    if [[ $source == 'dnf' ]]; then
-        if [[ $repo != 'null' ]]; then
-            sudo dnf copr enable $repo -y;
-        fi
-        sudo dnf install $package -y;
-    elif [[ $source == 'snap' ]]; then
-        sudo snap install $package;
-    elif [[ $source == 'snapClassic' ]]; then
-        sudo snap install $package --classic;
-    elif [[ $source == 'flatpak' ]]; then
-        sudo flatpak install $package -y;
-    elif [[ $source == 'script' ]]; then
-        $script;
-    fi
-done
-
 clear;
 
 theme=$(dialog --radiolist 'Choose theme. Hit cencel to stick with fedoras default theme' 20 100 20 \
@@ -97,6 +69,36 @@ if dialog --defaultno --yesno 'Do you want to install nvidia drivers?' 10 30 --o
 fi
 
 clear;
+
+
+for key in $(jq '.[] | map(select(.state == "on")) | keys | .[]' $baseDir/appsList.json); do
+    value=$(jq ".[] | map(select(.state == \"on\")) | .[$key]" $baseDir/appsList.json); 
+    app=$(jq --raw-output  ".app" <<< $value);
+    description=$(jq  --raw-output ".description" <<< $value);
+    state=$(jq --raw-output ".state" <<< $value);
+    source=$(jq --raw-output ".source" <<< $value);
+    script=$(jq --raw-output ".script?" <<< $value);
+    repo=$(jq --raw-output ".repo?" <<< $value);
+    package=$(jq --raw-output ".package?" <<< $value);
+    if [[ $package == 'null' ]]; then
+        package=$app;
+    fi;
+    if [[ $source == 'dnf' ]]; then
+        if [[ $repo != 'null' ]]; then
+            sudo dnf copr enable $repo -y;
+        fi
+        sudo dnf install $package -y;
+    elif [[ $source == 'snap' ]]; then
+        sudo snap install $package;
+    elif [[ $source == 'snapClassic' ]]; then
+        sudo snap install $package --classic;
+    elif [[ $source == 'flatpak' ]]; then
+        sudo flatpak install $package -y;
+    elif [[ $source == 'script' ]]; then
+        $script;
+    fi
+done
+
 
 source $baseDir/scripts/miscSetup.sh;
 

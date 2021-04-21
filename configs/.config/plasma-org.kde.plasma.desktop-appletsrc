@@ -71,7 +71,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][27][Applets][42][Configuration]
-PreloadWeight=89
+PreloadWeight=62
 
 [Containments][27][Applets][42][Configuration][ConfigDialog]
 DialogHeight=540
@@ -82,7 +82,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][27][Applets][48][Configuration]
-PreloadWeight=92
+PreloadWeight=88
 
 [Containments][27][Applets][48][Configuration][ConfigDialog]
 DialogHeight=540
@@ -154,7 +154,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][32][Applets][33][Configuration]
-PreloadWeight=4
+PreloadWeight=0
 
 [Containments][32][Applets][33][Configuration][ConfigDialog]
 DialogHeight=685
@@ -168,7 +168,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][32][Applets][34][Configuration]
-PreloadWeight=9
+PreloadWeight=0
 
 [Containments][32][Applets][35]
 immutability=1
@@ -203,7 +203,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][32][Applets][39][Configuration]
-PreloadWeight=16
+PreloadWeight=0
 
 [Containments][32][Applets][39][Configuration][ConfigDialog]
 DialogHeight=540
@@ -221,7 +221,7 @@ immutability=1
 plugin=org.kde.plasma.pkupdates
 
 [Containments][32][Applets][41][Configuration]
-PreloadWeight=92
+PreloadWeight=75
 
 [Containments][32][Applets][41][Configuration][ConfigDialog]
 DialogHeight=540
@@ -246,7 +246,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][32][Applets][46][Configuration]
-PreloadWeight=25
+PreloadWeight=0
 
 [Containments][32][Applets][46][Configuration][ConfigDialog]
 DialogHeight=540
@@ -260,7 +260,7 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][32][Applets][47][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][32][Applets][47][Configuration][ConfigDialog]
 DialogHeight=540
@@ -337,7 +337,7 @@ ToolBoxButtonState=topcenter
 ToolBoxButtonX=650
 arrangement=1
 iconSize=0
-positions=2,14,desktop:/doom.desktop,0,1,desktop:/done,0,0,desktop:/twitter,1,0
+positions=2,14,desktop:/done,0,0,desktop:/doom.desktop,0,1,desktop:/twitter,1,0
 previews=false
 sortMode=-1
 
@@ -357,4 +357,4 @@ SlidePaths=/home/chxei/.local/share/wallpapers,/usr/share/wallpapers,/media/data
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/done,0,desktop:/com.belmoussaoui.Authenticator.desktop,0,desktop:/twitter,0,file:///home/chxei/Desktop/Link to Application.desktop,0,desktop:/doom.desktop,0
+screenMapping=desktop:/doom.desktop,0,desktop:/com.belmoussaoui.Authenticator.desktop,0,desktop:/twitter,0,file:///home/chxei/Desktop/Link to Application.desktop,0,desktop:/done,0

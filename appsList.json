@@ -118,7 +118,7 @@
       "script": "installTidalDl"
     },
     {
-      "app": "keepassxcd",
+      "app": "keepassxc",
       "description": "open-source password manager",
       "state": "off",
       "source": "dnf"

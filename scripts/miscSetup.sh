@@ -59,7 +59,15 @@ case $browser in
     opera)
         #opera
         sudo rpm --import https://rpm.opera.com/rpmrepo.key;
-        echo '[opera] \nname=Opera packages \ntype=rpm-md \nbaseurl=https://rpm.opera.com/rpm \ngpgcheck=1 \ngpgkey=https://rpm.opera.com/rpmrepo.key \nenabled=1' | sudo tee /etc/yum.repos.d/opera.repo > /dev/null;
+sudo tee /etc/yum.repos.d/opera.repo <<RPMREPO
+[opera]
+name=Opera packages
+type=rpm-md
+baseurl=https://rpm.opera.com/rpm
+gpgcheck=1
+gpgkey=https://rpm.opera.com/rpmrepo.key
+enabled=1
+RPMREPO
         sudo dnf upgrade -y --refresh;
         sudo dnf install opera-stable -y;
         cd ~/temp;
