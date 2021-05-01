@@ -37,7 +37,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 #wallpaper
 mkdir -p ~/.local/share/wallpapers;
 cp $baseDir/assets/groovy_leaf.jpg ~/.local/share/wallpapers/;
-qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "
+qdbus-qt6 org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "
     var allDesktops = desktops();
     print (allDesktops);
     for (i=0;i<allDesktops.length;i++) {{
