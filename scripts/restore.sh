@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $baseDir/scripts/preSetup.sh;
+
 source $baseDir/scripts/appsSetup.sh;
 
 
@@ -59,17 +59,22 @@ browser=$(dialog --radiolist 'What browser do you want to install?' 15 30 10 'op
 
 clear;
 
+nvidia="no";
 if dialog --defaultno --yesno 'Do you want to install nvidia drivers?' 10 30 --output-fd 1; then
+    nvidia="yes";    
+fi
+
+clear;
+
+source $baseDir/scripts/preSetup.sh;
+
+if [[ $nvidia=='yes' ]]; then
     sudo dnf remove xorg-x11-drv-nouveau -y;
     sudo dnf install akmod-nvidia vulkan vdpauinfo libva-vdpau-driver libva-utils xorg-x11-drv-nvidia-cuda-libs xorg-x11-drv-nvidia-cuda -y;
     sudo akmods --force;
     sudo dracut --force;
     sudo grubby --update-kernel=ALL --args='nvidia-drm.modeset=1';
-    grub-update;
 fi
-
-clear;
-
 
 for key in $(jq '.[] | map(select(.state == "on")) | keys | .[]' $baseDir/appsList.json); do
     value=$(jq ".[] | map(select(.state == \"on\")) | .[$key]" $baseDir/appsList.json); 
@@ -93,7 +98,7 @@ for key in $(jq '.[] | map(select(.state == "on")) | keys | .[]' $baseDir/appsLi
     elif [[ $source == 'snapClassic' ]]; then
         sudo snap install $package --classic;
     elif [[ $source == 'flatpak' ]]; then
-        sudo flatpak install $package -y;
+        sudo flatpak install --app $package -y;
     elif [[ $source == 'script' ]]; then
         $script;
     fi

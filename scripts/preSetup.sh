@@ -10,7 +10,7 @@ mkdir ~/temp; #
 
 #cleanups
 sudo dnf remove Yakuake firefox dragon kmahjongg kpat kmines kolourpaint kmail konversation kruler krdc krfb kcolorchooser akregator kmousetool -y;
-sudo dnf remove k3b kamoso calligra-core kaddressbook korganizer kcharselect kmouth kwrite kmag dnfdragora krusader lynx fd-find fzf -y;
+sudo dnf remove k3b kamoso calligra-core kaddressbook korganizer kcharselect kmouth kwrite kmag dnfdragora krusader lynx fd-find fzf juk -y;
 
 
 # enable rpmfusion

@@ -1,7 +1,7 @@
 #!/bin/bash
 baseDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 #baseDir="$(dirname "$(readlink -f "$0")")"
-sudo dnf install dialog jq;
+sudo dnf install dialog jq -y;
 
 configFiles=('.config/zsh' '.config/autostart' '.config/conky' '.config/dolphinrc' '.config/katerc' '.config/kcminputrc' '.config/kded5rc' '.config/kdeglobals' \
             '.config/kglobalshortcutsrc' '.config/khotkeysrc' '.config/klipperrc' '.config/konsolerc' '.config/kscreenlockerrc' \
