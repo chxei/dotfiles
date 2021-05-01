@@ -19,7 +19,7 @@
       "source": "flatpak"
     },
     {
-      "app": "dbeaver-ce",
+      "app": "dbeaver",
       "description": "open-source database ide",
       "state": "off",
       "source": "flatpak"
