@@ -22,7 +22,7 @@ Startup Session=last
 Tabbar Tab Limit=0
 
 [KFileDialog Settings]
-Recent Files[$e]=.zshrc,file:///media/data/workplace/DotFiles/setup.sh,file:$HOME/.zhistory,file:$HOME/.zshrc
+Recent Files[$e]=.zshrc,file:$HOME/.bash_history,file:///media/data/workplace/DotFiles/setup.sh,file:$HOME/.zhistory,file:$HOME/.zshrc
 Recent URLs[$e]=file:$HOME/,file:$HOME/Documents/,file:///media/data/workplace/DotFiles/
 iconViewIconSize=43
 

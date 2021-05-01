@@ -23,13 +23,7 @@ installZsh(){
     wget -qo - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/bgnotify/bgnotify.plugin.zsh
     ##for gll alias
     git config --global alias.ll 'log --graph --format="%C(yellow)%h%C(red)%d%C(reset) - %C(bold green)(%ar)%C(reset) %s %C(blue)<%an>%C(reset)"'
-    #remove default configs
-    rm -rf ~/.zshrc;
-    sudo rm -rf /root/.zshrc;
-    #restore saved .zshrc
-    sudo cp $baseDir/home/.zshrc ~/.zshrc;
-    #make same config for root. copy because cross partition symlinks are not available
-    sudo cp ~/.zshrc /root/.zshrc;
+    echo "export ZDOTDIR=/home/$USER/.config/zsh" | sudo tee -a /etc/zshenv;
 }
 
 installZoom(){

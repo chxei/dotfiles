@@ -10,46 +10,43 @@
       "app": "postman",
       "description": "api development tool",
       "state": "off",
-      "source": "snapClassic"
+      "source": "flatpak"
     },
     {
       "app": "intellij-idea-community",
       "description": "java ide",
       "state": "off",
-      "source": "snapClassic"
+      "source": "flatpak"
     },
     {
       "app": "dbeaver-ce",
       "description": "open-source database ide",
       "state": "off",
-      "source": "snapClassic"
+      "source": "flatpak"
     },
     {
       "app": "slack",
       "description": "enterprise communcation app",
       "state": "off",
-      "source": "snapClassic"
+      "source": "flatpak"
     },
     {
       "app": "podcasts",
       "description": "podcast player",
       "state": "off",
-      "source": "flatpak",
-      "package": "org.gnome.Podcasts"
+      "source": "flatpak"
     },
     {
       "app": "authenticator",
       "description": "two factor authenticator",
       "state": "off",
-      "source": "flatpak",
-      "package": "com.belmoussaoui.Authenticator"
+      "source": "flatpak"
     },
     {
       "app": "foliate",
       "description": "ebook reader",
       "state": "off",
-      "source": "flatpak",
-      "package": "fedora com.github.johnfactotum.Foliate"
+      "source": "flatpak"
     },
     {
       "app": "smplayer",
@@ -155,6 +152,14 @@
       "description": "virtual machine",
       "source": "dnf",
       "state": "off"
+    },
+    {
+      "app": "asus rog tools",
+      "description": "kernel with asus rog patches + asusctl",
+      "source": "dnf",
+      "repo": "lukenukem/asus-linux",
+      "package":"asusctl kernel",
+      "state":"off"
     }
   ]
 }

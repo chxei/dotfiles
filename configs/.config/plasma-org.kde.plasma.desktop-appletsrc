@@ -63,7 +63,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][27][Applets][31][Configuration]
-PreloadWeight=100
+PreloadWeight=84
 SystrayContainmentId=32
 
 [Containments][27][Applets][42]
@@ -71,7 +71,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][27][Applets][42][Configuration]
-PreloadWeight=62
+PreloadWeight=22
 
 [Containments][27][Applets][42][Configuration][ConfigDialog]
 DialogHeight=540
@@ -82,7 +82,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][27][Applets][48][Configuration]
-PreloadWeight=88
+PreloadWeight=89
 
 [Containments][27][Applets][48][Configuration][ConfigDialog]
 DialogHeight=540
@@ -109,7 +109,7 @@ DialogWidth=720
 [Containments][27][Applets][55][Configuration][General]
 groupedTaskVisualization=3
 groupingStrategy=0
-launchers=applications:org.kde.dolphin.desktop,applications:org.kde.ksysguard.desktop,applications:org.kde.konsole.desktop,applications:org.remmina.Remmina.desktop,applications:opera.desktop,applications:slack_slack.desktop,applications:code.desktop,applications:intellij-idea-community_intellij-idea-community.desktop,applications:dbeaver-ce_dbeaver-ce.desktop,applications:org.kde.okular.desktop,applications:postman_postman.desktop,file:///var/lib/flatpak/exports/share/applications/com.github.johnfactotum.Foliate.desktop,file:///var/lib/flatpak/exports/share/applications/com.belmoussaoui.Authenticator.desktop,applications:org.kde.kcalc.desktop,applications:org.kde.knotes.desktop,applications:org.kde.juk.desktop,applications:org.kde.ktorrent.desktop,applications:org.kde.kget.desktop,file:///var/lib/flatpak/exports/share/applications/org.gnome.Podcasts.desktop,applications:org.kde.kate.desktop,applications:org.keepassxc.KeePassXC.desktop,applications:chromium-browser-privacy.desktop,applications:org.joplinapp.joplin.desktop,file:///var/lib/flatpak/exports/share/applications/de.haeckerfelix.Shortwave.desktop,applications:virtualbox.desktop
+launchers=applications:org.kde.dolphin.desktop,applications:org.kde.ksysguard.desktop,applications:org.kde.konsole.desktop,applications:org.remmina.Remmina.desktop,applications:com.slack.Slack.desktop,applications:opera.desktop,applications:code.desktop,file:///var/lib/flatpak/exports/share/applications/io.dbeaver.DBeaverCommunity.desktop,applications:com.getpostman.Postman.desktop,applications:org.kde.okular.desktop,file:///var/lib/flatpak/exports/share/applications/com.github.johnfactotum.Foliate.desktop,file:///var/lib/flatpak/exports/share/applications/com.belmoussaoui.Authenticator.desktop,applications:org.kde.kcalc.desktop,applications:org.kde.juk.desktop,applications:org.kde.ktorrent.desktop,applications:org.kde.kget.desktop,file:///var/lib/flatpak/exports/share/applications/org.gnome.Podcasts.desktop,applications:org.kde.kate.desktop,applications:org.keepassxc.KeePassXC.desktop,applications:chromium-browser-privacy.desktop,applications:org.joplinapp.joplin.desktop,applications:virtualbox.desktop
 
 [Containments][27][Applets][56]
 immutability=1
@@ -131,7 +131,7 @@ immutability=1
 plugin=gr.ictpro.jsalatas.plasma.pstate
 
 [Containments][27][ConfigDialog]
-DialogHeight=73
+DialogHeight=83
 DialogWidth=1920
 
 [Containments][27][Configuration]
@@ -221,7 +221,7 @@ immutability=1
 plugin=org.kde.plasma.pkupdates
 
 [Containments][32][Applets][41][Configuration]
-PreloadWeight=75
+PreloadWeight=76
 
 [Containments][32][Applets][41][Configuration][ConfigDialog]
 DialogHeight=540
@@ -239,7 +239,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][32][Applets][45][Configuration]
-PreloadWeight=100
+PreloadWeight=55
 
 [Containments][32][Applets][46]
 immutability=1
@@ -313,7 +313,7 @@ DialogWidth=720
 PreloadWeight=0
 
 [Containments][54][Wallpaper][org.kde.image][General]
-Image=/media/data/wallpapers/wallhaven-e7xw6w_1920x1080.png
+Image=file:///home/chxei/.local/share/wallpapers/groovy_leaf.jpg
 SlidePaths=/home/chxei/.local/share/wallpapers,/usr/share/wallpapers
 
 [Containments][58]
@@ -337,7 +337,7 @@ ToolBoxButtonState=topcenter
 ToolBoxButtonX=650
 arrangement=1
 iconSize=0
-positions=2,14,desktop:/done,0,0,desktop:/doom.desktop,0,1,desktop:/twitter,1,0
+positions=1,14,desktop:/doom.desktop,0,1,desktop:/done,0,0,desktop:/Dota 2.desktop,0,2
 previews=false
 sortMode=-1
 
@@ -357,4 +357,4 @@ SlidePaths=/home/chxei/.local/share/wallpapers,/usr/share/wallpapers,/media/data
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/doom.desktop,0,desktop:/com.belmoussaoui.Authenticator.desktop,0,desktop:/twitter,0,file:///home/chxei/Desktop/Link to Application.desktop,0,desktop:/done,0
+screenMapping=desktop:/done,0,desktop:/com.belmoussaoui.Authenticator.desktop,0,desktop:/Dota 2.desktop,0,file:///home/chxei/Desktop/Link to Application.desktop,0,desktop:/doom.desktop,0

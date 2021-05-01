@@ -36,7 +36,7 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 HISTSIZE=1000
 SAVEHIST=1000
-HISTFILE=~/.bash_history
+HISTFILE=~/.config/zsh/.zhistory
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
 # Alias section
