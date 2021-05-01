@@ -98,7 +98,7 @@ for key in $(jq '.[] | map(select(.state == "on")) | keys | .[]' $baseDir/appsLi
     elif [[ $source == 'snapClassic' ]]; then
         sudo snap install $package --classic;
     elif [[ $source == 'flatpak' ]]; then
-        sudo flatpak install --app $package -y;
+        sudo flatpak install --app --noninteractive $package -y;
     elif [[ $source == 'script' ]]; then
         $script;
     fi

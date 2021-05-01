@@ -40,13 +40,15 @@
       "app": "authenticator",
       "description": "two factor authenticator",
       "state": "off",
-      "source": "flatpak"
+      "source": "flatpak",
+      "package": "com.belmoussaoui.Authenticator"
     },
     {
       "app": "foliate",
       "description": "ebook reader",
       "state": "off",
-      "source": "flatpak"
+      "source": "flatpak",
+      "package" : "fedora foliate"
     },
     {
       "app": "smplayer",
