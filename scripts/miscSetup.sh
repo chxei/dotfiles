@@ -103,6 +103,8 @@ for file in "${configFiles[@]}"; do
     cp -r --parents "$file" "$HOME" 
 done
 
+chmod +x ~/.config/conky/startup.sh
+
 if [[ $icontheme == *'breeze-dark'* ]]; then
     /usr/libexec/plasma-changeicons breeze-dark;
 elif [[ $icontheme == *'breeze-light'* ]]; then

@@ -150,7 +150,7 @@
       "source": "dnf"
     },
     {
-      "app": "virtualbox",
+      "app": "VirtualBox",
       "description": "virtual machine",
       "source": "dnf",
       "state": "off"
