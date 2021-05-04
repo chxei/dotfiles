@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=gzdoom -savedir ./savedir -file brutalv21.pk3 IDKFAv2.wad\n
+GenericName[en_US]=
+GenericName=
+Icon=gzdoom
+MimeType=
+Name[en_US]=doom
+Name=doom
+Path=/media/data/games/doom
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

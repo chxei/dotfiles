@@ -27,3 +27,6 @@ if [[ $action == 'backup' ]]; then
 elif [[ $action == 'restore' ]]; then
     source $baseDir/scripts/restore.sh;
 fi
+
+#todo emergency restory
+#todo git user name and mail

@@ -3,7 +3,7 @@
 #pre-setup
 
 sudo updatedb; #update locate database
-echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/$USER; #allow current use executing sudo without passhord
+echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/$USER; #allow current user executing sudo without passhord
 git config --global init.defaultBranch main #get rid off silly warning about branch name
 mkdir ~/temp; #
 
@@ -36,7 +36,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 
 #wallpaper
 mkdir -p ~/.local/share/wallpapers;
-cp $baseDir/assets/groovy_leaf.jpg ~/.local/share/wallpapers/;
+cp $baseDir/assets/wallpaper.jpg ~/.local/share/wallpapers/;
 qdbus-qt6 org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "
     var allDesktops = desktops();
     print (allDesktops);
@@ -46,6 +46,6 @@ qdbus-qt6 org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "
         d.currentConfigGroup = Array('Wallpaper',
                                      'org.kde.image',
                                      'General');
-        d.writeConfig('Image', 'file:///home/$USER/.local/share/wallpapers/groovy_leaf.jpg')
+        d.writeConfig('Image', 'file:///home/$USER/.local/share/wallpapers/wallpaper.jpg')
     }}
 "
