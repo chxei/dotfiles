@@ -6,9 +6,14 @@ installZsh(){
     #change default shell for zsh
     chsh -s /bin/zsh;
     sudo chsh -s /bin/zsh;
-    go get -u github.com/dim-an/cod;
-    mv ~/go/bin/cod ~/.local/bin
+    
     #download some cool zsh plugins
+    cd ~/temp;
+    git clone https://github.com/dim-an/cod.git;
+    cd cod;
+    go build;
+    mv cod ~/.local/bin;
+    
     mkdir ~/.local/bin/zsh_plugins/ -p;
     cd ~/.local/bin/zsh_plugins;
     git clone https://github.com/denysdovhan/spaceship-prompt.git;
