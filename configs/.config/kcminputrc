@@ -2,11 +2,16 @@
 update_info=delete_cursor_old_default_size.upd:DeleteCursorOldDefaultSize
 
 [Keyboard]
+KeyRepeat=repeat
 KeyboardRepeating=0
 NumLock=2
 RepeatDelay=600
 RepeatRate=25
 
+[Libinput][5426][138][Razer Razer Viper Mini]
+PointerAcceleration=-0.600
+PointerAccelerationProfile=2
+
 [Mouse]
 XLbInptPointerAcceleration=-0.6
-cursorTheme=breeze_cursors
+cursorTheme=Bibata-Modern-Classic

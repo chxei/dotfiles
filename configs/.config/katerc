@@ -22,8 +22,8 @@ Startup Session=last
 Tabbar Tab Limit=0
 
 [KFileDialog Settings]
-Recent Files[$e]=.zshrc,file:$HOME/.bash_history,file:///media/data/workplace/DotFiles/setup.sh,file:$HOME/.zhistory,file:$HOME/.zshrc
-Recent URLs[$e]=file:$HOME/,file:$HOME/Documents/,file:///media/data/workplace/DotFiles/
+Recent Files[$e]=.zshrc,file:$HOME/.config/zsh/.zhistory,file:$HOME/.bash_history,file:///media/data/workplace/DotFiles/setup.sh,file:$HOME/.zshrc
+Recent URLs[$e]=file:$HOME/,file:$HOME/Documents/,file:///media/data/workplace/DotFiles/,file:$HOME/Desktop/,file:$HOME/.config/zsh/
 iconViewIconSize=43
 
 [KPropertiesDialog]
@@ -83,6 +83,7 @@ Allow Mark Menu=true
 Auto Brackets=false
 Auto Center Lines=0
 Auto Completion=true
+Auto Completion Preselect First Entry=true
 Backspace Remove Composed Characters=false
 Bookmark Menu Sorting=0
 Bracket Match Preview=false
@@ -124,8 +125,8 @@ Word Completion Minimal Word Length=3
 Word Completion Remove Tail=true
 
 [KTextEditor::Search]
-Replace History=.config
-Search History=file,preb,cod,play,sections,src,gll,/dev/nvme0n1p1,conky,intel,$configFolder
+Replace History=WINE_GE,.config
+Search History=WINE_TKG,meet,file,preb,cod,play,sections,src,gll,/dev/nvme0n1p1,conky,intel,$configFolder
 
 [Konsole]
 AutoSyncronize=true
@@ -135,34 +136,46 @@ SetEditor=false
 
 [MainWindow]
 HDMI-A-0 eDP Height 1080=1050
-HDMI-A-0 eDP Height 1920x1080=1008
+HDMI-A-0 eDP Height 1440x900=835
+HDMI-A-0 eDP Height 1920x1080=1051
+HDMI-A-0 eDP Width 1440x900=1440
 HDMI-A-0 eDP Width 1920=1920
 HDMI-A-0 eDP Width 1920x1080=1920
 HDMI-A-0 eDP Window-Maximized 1080x1920=true
 HDMI-A-0 eDP Window-Maximized 1920x1080=true
 HDMI-A-0 eDP XPosition=2065
-HDMI-A-0 eDP XPosition 1920x1080=1920
+HDMI-A-0 eDP XPosition 1440x900=1920
+HDMI-A-0 eDP XPosition 1920x1080=3112
 HDMI-A-0 eDP YPosition=32
-HDMI-A-0 eDP YPosition 1920x1080=34
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAPTAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+HDMI-A-0 eDP YPosition 1440x900=29
+HDMI-A-0 eDP YPosition 1920x1080=52
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAPZAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
+default Height 1920x1080=1013
+default Width 1920x1080=1920
+default XPosition 1920x1080=0
+default YPosition 1920x1080=29
 eDP Height 1080=1014
-eDP Height 1920x1080=1008
+eDP Height 1920x1080=1015
 eDP Width 1920=1920
 eDP Width 1920x1080=1920
 eDP Window-Maximized 1080x1920=true
+eDP Window-Maximized 1920x1080=true
 eDP XPosition=0
 eDP XPosition 1920x1080=0
 eDP YPosition=32
-eDP YPosition 1920x1080=34
+eDP YPosition 1920x1080=29
+eDP-1 HDMI-A-1 Window-Maximized 1920x1080=true
 
 [UiSettings]
 ColorScheme=Materia Dark
 
 [filetree]
-editShade=34,83,109
+editShade=178,218,246
 listMode=false
 shadingEnabled=true
+showCloseButton=false
 showFullPathOnRoots=false
+showToolbar=true
 sortRole=0
-viewShade=91,56,92
+viewShade=193,207,208

@@ -14,7 +14,7 @@ autoload=false
 autoload=true
 
 [Module-colord]
-autoload=false
+autoload=true
 
 [Module-device_automounter]
 autoload=false
@@ -26,7 +26,10 @@ autoload=true
 autoload=true
 
 [Module-kded_accounts]
-autoload=false
+autoload=true
+
+[Module-kded_bolt]
+autoload=true
 
 [Module-kded_dnssdwatcher]
 autoload=false
@@ -58,7 +61,13 @@ autoload=true
 [Module-printmanager]
 autoload=false
 
+[Module-proxyscout]
+autoload=true
+
 [Module-remotenotifier]
+autoload=true
+
+[Module-smbwatcher]
 autoload=true
 
 [Module-statusnotifierwatcher]
@@ -68,4 +77,4 @@ autoload=true
 autoload=true
 
 [PlasmaBrowserIntegration]
-shownCount=3
+shownCount=1

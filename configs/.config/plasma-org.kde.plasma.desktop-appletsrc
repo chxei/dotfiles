@@ -1,53 +1,17 @@
 [ActionPlugins][0]
-MidButton;NoModifier=org.kde.paste
+MiddleButton;NoModifier=org.kde.paste
 RightButton;NoModifier=org.kde.contextmenu
 wheel:Vertical;NoModifier=org.kde.switchdesktop
 
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][26]
-activityId=3e2fc9d7-e77e-4796-a1a9-0183cc99051b
-formfactor=0
-immutability=1
-lastScreen=1
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
+[AppletGlobals][org.kde.plasma.comic]
+lastUpdate=2021,7,29,1,16,13.81
+updateInterval=3
 
-[Containments][26][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][26][Configuration]
-PreloadWeight=0
-
-[Containments][26][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=739
-
-[Containments][26][Wallpaper][com.github.zzag.dynamic][General]
-Image=file:///home/chxei/.local/share/wallpapers/stellarvintage.jpg
-
-[Containments][26][Wallpaper][online.knowmad.shaderwallpaper][General]
-iChannel0_flag=true
-iChannel1_flag=true
-iChannel2_flag=true
-iChannel3_flag=true
-selectedShader=file:///home/chxei/.local/share/plasma/wallpapers/online.knowmad.shaderwallpaper/contents/ui/Shaders/Booting.frag
-selectedShaderContent=// https://www.shadertoy.com/view/Md33zB\n// Credits to zifnab\n\n/*\n A noise function mirrored and thresholded to maximize the value at the center of the screen\n Combined with a second layer of noise to produce an ink on paper effect\n*/\n\nconst vec3 inkColor = vec3(0.009994659342336155, 0.009994659342336155, 0.10000762951094835);\nconst vec3 paperColor = vec3(1.0, 0.98, 0.94);\n\nconst float speed = 0.0075;\nconst float shadeContrast = 0.55;\n\n//3D simplex noise from: https://www.shadertoy.com/view/XsX3zB\nconst float F3 =  0.3333333;\nconst float G3 =  0.1666667;\n\nvec3 random3(vec3 c) {\n    float j = 4096.0*sin(dot(c,vec3(17.0, 59.4, 15.0)));\n    vec3 r;\n    r.z = fract(512.0*j);\n    j *= .125;\n    r.x = fract(512.0*j);\n    j *= .125;\n    r.y = fract(512.0*j);\n    return r-0.5;\n}\n\nfloat simplex3d(vec3 p) {\n\t vec3 s = floor(p + dot(p, vec3(F3)));\n\t vec3 x = p - s + dot(s, vec3(G3));\n\n\t vec3 e = step(vec3(0.0), x - x.yzx);\n\t vec3 i1 = e*(1.0 - e.zxy);\n\t vec3 i2 = 1.0 - e.zxy*(1.0 - e);\n\n\t vec3 x1 = x - i1 + G3;\n\t vec3 x2 = x - i2 + 2.0*G3;\n\t vec3 x3 = x - 1.0 + 3.0*G3;\n\n\t vec4 w, d;\n\n\t w.x = dot(x, x);\n\t w.y = dot(x1, x1);\n\t w.z = dot(x2, x2);\n\t w.w = dot(x3, x3);\n\n\t w = max(0.6 - w, 0.0);\n\n\t d.x = dot(random3(s), x);\n\t d.y = dot(random3(s + i1), x1);\n\t d.z = dot(random3(s + i2), x2);\n\t d.w = dot(random3(s + 1.0), x3);\n\n\t w *= w;\n\t w *= w;\n\t d *= w;\n\n\t return dot(d, vec4(52.0));\n}\n\nfloat fbm(vec3 p)\n{\n\tfloat f = 0.0;\n\tfloat frequency = 1.0;\n\tfloat amplitude = 0.5;\n\tfor (int i = 0; i < 5; i++)\n\t{\n\t\tf += simplex3d(p * frequency) * amplitude;\n\t\tamplitude *= 0.5;\n\t\tfrequency *= 2.0 + float(i) / 100.0;\n\t}\n\treturn min(f, 1.0);\n}\n\nvoid mainImage( out vec4 fragColor, in vec2 fragCoord )\n{\n    //Setup coordinates\n    vec2 uv = 1.0 - fragCoord.xy / iResolution.xy;\n    vec2 coord = 1.0 - uv * 2.0;\n    uv.x = 1.0 - abs(1.0 - uv.x * 2.0);\n    vec3 p = vec3(uv, iTime * speed);\n\n    //Sample a noise function\n    float blot = fbm(p * 3.0 + 8.0);\n    float shade = fbm(p * 2.0 + 16.0);\n\n    //Threshold\n    blot = (blot + (sqrt(uv.x) - abs(0.5 - uv.y)));\n    blot = smoothstep(0.65, 0.71, blot) * max(1.0 - shade * shadeContrast, 0.0);\n\n    //Color\n    fragColor = vec4(mix(paperColor, inkColor, blot), 1.0);\n    fragColor.rgb *= 1.0 - pow(max(length(coord) - 0.5, 0.0), 5.0);\n}\n
-shaderSpeed=0.08000000000000007
-
-[Containments][26][Wallpaper][org.kde.color][General]
-Color=0,0,0
-
-[Containments][26][Wallpaper][org.kde.image][General]
-Image=file:///home/chxei/.local/share/wallpapers/groovy_leaf.jpg
-SlidePaths=/home/chxei/.local/share/wallpapers,/usr/share/wallpapers
-
-[Containments][26][Wallpaper][org.kde.potd][General]
-FillMode=2
-Provider=epod
+[Containments][2][Applets][7][Configuration]
+PreloadWeight=100
 
 [Containments][27]
 activityId=
@@ -63,7 +27,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][27][Applets][31][Configuration]
-PreloadWeight=94
+PreloadWeight=100
 SystrayContainmentId=32
 
 [Containments][27][Applets][42]
@@ -71,10 +35,10 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][27][Applets][42][Configuration]
-PreloadWeight=22
+PreloadWeight=100
 
 [Containments][27][Applets][42][Configuration][ConfigDialog]
-DialogHeight=540
+DialogHeight=558
 DialogWidth=720
 
 [Containments][27][Applets][48]
@@ -109,7 +73,7 @@ DialogWidth=720
 [Containments][27][Applets][55][Configuration][General]
 groupedTaskVisualization=3
 groupingStrategy=0
-launchers=applications:org.kde.dolphin.desktop,applications:org.kde.ksysguard.desktop,applications:org.kde.konsole.desktop,applications:org.remmina.Remmina.desktop,applications:com.slack.Slack.desktop,applications:opera.desktop,applications:code.desktop,file:///var/lib/flatpak/exports/share/applications/io.dbeaver.DBeaverCommunity.desktop,applications:com.getpostman.Postman.desktop,applications:org.kde.okular.desktop,file:///var/lib/flatpak/exports/share/applications/com.github.johnfactotum.Foliate.desktop,file:///var/lib/flatpak/exports/share/applications/com.belmoussaoui.Authenticator.desktop,applications:org.kde.kcalc.desktop,applications:org.kde.ktorrent.desktop,applications:org.kde.kget.desktop,file:///var/lib/flatpak/exports/share/applications/org.gnome.Podcasts.desktop,applications:org.kde.kate.desktop,applications:org.keepassxc.KeePassXC.desktop,applications:org.joplinapp.joplin.desktop,applications:virtualbox.desktop
+launchers=applications:org.kde.dolphin.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:org.kde.konsole.desktop,applications:opera.desktop,applications:com.slack.Slack.desktop,applications:org.remmina.Remmina.desktop,applications:code.desktop,applications:org.kde.okular.desktop,file:///var/lib/flatpak/exports/share/applications/com.belmoussaoui.Authenticator.desktop,applications:org.kde.kcalc.desktop,applications:org.qbittorrent.qBittorrent.desktop,applications:org.kde.kget.desktop,file:///var/lib/flatpak/exports/share/applications/org.gnome.Podcasts.desktop,applications:org.kde.kate.desktop,applications:org.keepassxc.KeePassXC.desktop,applications:org.joplinapp.joplin.desktop,applications:virtualbox.desktop,applications:org.kde.elisa.desktop,applications:discord.desktop
 
 [Containments][27][Applets][56]
 immutability=1
@@ -119,7 +83,7 @@ plugin=org.kde.plasma.pager
 PreloadWeight=0
 
 [Containments][27][Applets][56][Configuration][ConfigDialog]
-DialogHeight=540
+DialogHeight=558
 DialogWidth=720
 
 [Containments][27][Applets][56][Configuration][General]
@@ -130,15 +94,38 @@ showOnlyCurrentScreen=true
 immutability=1
 plugin=gr.ictpro.jsalatas.plasma.pstate
 
+[Containments][27][Applets][76]
+immutability=1
+plugin=org.kde.plasma.weather
+
+[Containments][27][Applets][76][Configuration]
+PreloadWeight=100
+pressureUnit=5007
+showHumidityInTooltip=true
+showPressureInTooltip=true
+showTemperatureInCompactMode=true
+showTemperatureInTooltip=true
+showWindInTooltip=true
+source=bbcukmet|weather|Tbilisi, Georgia, GE|611717
+speedUnit=9001
+temperatureUnit=6001
+updateInterval=30
+visibilityUnit=2007
+weatherServiceProviders=bbcukmet,envcan,noaa,wettercom
+
+[Containments][27][Applets][76][Configuration][ConfigDialog]
+DialogHeight=558
+DialogWidth=720
+
 [Containments][27][ConfigDialog]
-DialogHeight=83
+DialogHeight=84
 DialogWidth=1920
 
 [Containments][27][Configuration]
 PreloadWeight=0
 
 [Containments][27][General]
-AppletOrder=48;55;56;31;42
+AppletOrder=48;55;56;76;31;42
 
 [Containments][32]
 activityId=
@@ -154,7 +141,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][32][Applets][33][Configuration]
-PreloadWeight=5
+PreloadWeight=100
 
 [Containments][32][Applets][33][Configuration][ConfigDialog]
 DialogHeight=685
@@ -162,34 +149,39 @@ DialogWidth=882
 
 [Containments][32][Applets][33][Configuration][General]
 raiseMaximumVolume=true
+volumeFeedback=false
 
 [Containments][32][Applets][34]
 immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][32][Applets][34][Configuration]
-PreloadWeight=0
+PreloadWeight=100
 
 [Containments][32][Applets][35]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][32][Applets][35][Configuration]
-PreloadWeight=0
+PreloadWeight=100
 
 [Containments][32][Applets][36]
 immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][32][Applets][36][Configuration]
-PreloadWeight=0
+PreloadWeight=84
 
 [Containments][32][Applets][37]
 immutability=1
 plugin=org.kde.plasma.keyboardindicator
 
 [Containments][32][Applets][37][Configuration]
-PreloadWeight=0
+PreloadWeight=4
+
+[Containments][32][Applets][37][Configuration][ConfigDialog]
+DialogHeight=558
+DialogWidth=720
 
 [Containments][32][Applets][38]
 immutability=1
@@ -203,7 +195,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][32][Applets][39][Configuration]
-PreloadWeight=0
+PreloadWeight=100
 
 [Containments][32][Applets][39][Configuration][ConfigDialog]
 DialogHeight=540
@@ -239,14 +231,14 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][32][Applets][45][Configuration]
-PreloadWeight=60
+PreloadWeight=100
 
 [Containments][32][Applets][46]
 immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][32][Applets][46][Configuration]
-PreloadWeight=0
+PreloadWeight=100
 
 [Containments][32][Applets][46][Configuration][ConfigDialog]
 DialogHeight=540
@@ -271,7 +263,7 @@ immutability=1
 plugin=org.kde.kscreen
 
 [Containments][32][Applets][51][Configuration]
-PreloadWeight=0
+PreloadWeight=4
 
 [Containments][32][Applets][52][Configuration]
 PreloadWeight=42
@@ -283,6 +275,17 @@ plugin=touchpad
 [Containments][32][Applets][53][Configuration]
 PreloadWeight=0
 
+[Containments][32][Applets][60]
+immutability=1
+plugin=org.kde.plasma.keyboardlayout
+
+[Containments][32][Applets][60][Configuration]
+PreloadWeight=34
+
+[Containments][32][Applets][60][Configuration][ConfigDialog]
+DialogHeight=558
+DialogWidth=720
+
 [Containments][32][ConfigDialog]
 DialogHeight=1010
 DialogWidth=1920
@@ -291,70 +294,115 @@ DialogWidth=1920
 PreloadWeight=0
 
 [Containments][32][General]
-extraItems=org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.pkupdates,org.kde.plasma.printmanager,org.kde.plasma.volume,steam,org.kde.kscreen,touchpad
+extraItems=org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.kscreen,touchpad,org.kde.plasma.keyboardlayout
 hiddenItems=org.kde.kscreen,org.kde.kdeconnect,org.kde.plasma.bluetooth,touchpad
-knownItems=org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.pkupdates,org.kde.plasma.printmanager,org.kde.plasma.volume
+knownItems=org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.keyboardlayout
 shownItems=org.kde.plasma.nightcolorcontrol
 
-[Containments][54]
-activityId=3e2fc9d7-e77e-4796-a1a9-0183cc99051b
-formfactor=0
-immutability=1
-lastScreen=2
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][54][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][54][Configuration]
-PreloadWeight=0
-
-[Containments][54][Wallpaper][org.kde.image][General]
-Image=file:///home/chxei/.local/share/wallpapers/groovy_leaf.jpg
-SlidePaths=/home/chxei/.local/share/wallpapers,/usr/share/wallpapers
-
-[Containments][58]
-activityId=3e2fc9d7-e77e-4796-a1a9-0183cc99051b
+[Containments][70]
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
+activityId=c8db625e-afb0-4f61-a00f-76bbbc7936bb
 formfactor=0
 immutability=1
 lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.color
+wallpaperplugin=org.kde.image
 
-[Containments][58][ConfigDialog]
-DialogHeight=660
-DialogWidth=1280
+[Containments][70][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
-[Containments][58][Configuration]
-PreloadWeight=0
+[Containments][70][Configuration]
+PreloadWeight=18
 
-[Containments][58][General]
+[Containments][70][General]
 ToolBoxButtonState=topcenter
-ToolBoxButtonX=650
-arrangement=1
-iconSize=0
-positions=1,14,desktop:/doom.desktop,0,1,desktop:/done,0,0,desktop:/Dota 2.desktop,0,2
-previews=false
+ToolBoxButtonX=577
+positions=3,17,desktop:/Navigation Updater.desktop,1,5,desktop:/Kotlin and Android Development featuring Jetpack by Michael Fazio (z-lib.org).pdf,2,5,desktop:/Arctype-0.9.17.AppImage,1,4,desktop:/user_settings.py,2,4,desktop:/Beekeeper-Studio-2.1.4.AppImage,1,3,desktop:/strawberry-1.0.0-1.fc34.x86_64.rpm,2,3,desktop:/tutorials,0,2,desktop:/Waagal - Mezerg & Waagal - Music for 2 One Man Bands (single).flac,2,2,desktop:/gameLauncher,1,2,desktop:/games,0,1,desktop:/NavigationUpdaterSetup.exe,2,1,desktop:/studio.sh,1,1,desktop:/workplace,0,0,desktop:/The Only Thing They Fear\\, Is Him.mp3,2,0,desktop:/idea.sh,1,0
 sortMode=-1
 
-[Containments][58][Wallpaper][com.github.zzag.dynamic][General]
-Image=file:///media/data/workplace/DotFiles/assets/wallpaper.heic
-
-[Containments][58][Wallpaper][org.kde.color][General]
-Color=0,0,0
-
-[Containments][58][Wallpaper][org.kde.image][General]
-Image=file:///home/chxei/.local/share/wallpapers/groovy_leaf.jpg
+[Containments][70][Wallpaper][org.kde.image][General]
+Image=file:///home/chxei/.local/share/wallpapers/wallpaper.jpg
 SlidePaths=/home/chxei/.local/share/wallpapers,/usr/share/wallpapers
 
-[Containments][58][Wallpaper][org.kde.slideshow][General]
-Image=file:///media/data/wallpapers/Walli Artworks/Friends6020_square.jpg
-SlidePaths=/home/chxei/.local/share/wallpapers,/usr/share/wallpapers,/media/data/wallpapers
+[Containments][77]
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
+activityId=c8db625e-afb0-4f61-a00f-76bbbc7936bb
+formfactor=0
+immutability=1
+lastScreen=3
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][77][ConfigDialog]
+DialogHeight=558
+DialogWidth=720
+
+[Containments][77][Configuration]
+PreloadWeight=34
+
+[Containments][77][Wallpaper][org.kde.image][General]
+Image=file:///home/chxei/.local/share/wallpapers/wallpaper.jpg
+SlidePaths=/home/chxei/.local/share/wallpapers,/usr/share/wallpapers
+
+[Containments][78]
+activityId=c8db625e-afb0-4f61-a00f-76bbbc7936bb
+formfactor=0
+immutability=1
+lastScreen=4
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][78][Configuration]
+PreloadWeight=42
+
+[Containments][78][Wallpaper][org.kde.image][General]
+Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.png
+
+[Containments][8][Applets][21][Configuration]
+PreloadWeight=70
+
+[Containments][80]
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
+activityId=c8db625e-afb0-4f61-a00f-76bbbc7936bb
+formfactor=0
+immutability=1
+lastScreen=1
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][80][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][80][Configuration]
+PreloadWeight=34
+
+[Containments][80][Wallpaper][org.kde.image][General]
+Image=file:///home/chxei/.local/share/wallpapers/wallpaper.jpg
+SlidePaths=/home/chxei/.local/share/wallpapers,/usr/share/wallpapers
+
+[Containments][81]
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
+activityId=c8db625e-afb0-4f61-a00f-76bbbc7936bb
+formfactor=0
+immutability=1
+lastScreen=5
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][81][Wallpaper][org.kde.image][General]
+Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.png
 
 [ScreenMapping]
-itemsOnDisabledScreens=
-screenMapping=desktop:/done,0,desktop:/com.belmoussaoui.Authenticator.desktop,0,desktop:/Dota 2.desktop,0,file:///home/chxei/Desktop/Link to Application.desktop,0,desktop:/doom.desktop,0
+itemsOnDisabledScreens=1,13,file:///home/chxei/Nextcloud,file:///home/chxei/Downloads,file:///home/chxei/Music,file:///home/chxei/VirtualBox VMs,file:///home/chxei/go,file:///home/chxei/Desktop,file:///home/chxei/Postman,file:///home/chxei/Documents,file:///home/chxei/temp,file:///home/chxei/Videos,file:///home/chxei/Templates,file:///home/chxei/Pictures,file:///home/chxei/Public
+screenMapping=desktop:/com.belmoussaoui.Authenticator.desktop,0,desktop:/workplace,0,desktop:/Waagal - Mezerg & Waagal - Music for 2 One Man Bands (single).flac,0,desktop:/tenor.gif,0,desktop:/Navigation Updater.desktop,0,desktop:/Beekeeper-Studio-2.1.4.AppImage,0,desktop:/done,0,desktop:/tenor (1).gif,0,desktop:/d8vvnwm-961aa00d-a7de-4e2f-9c0f-4fc195455663.gif,0,desktop:/tutorials,0,desktop:/gameLauncher,0,desktop:/Proton-6.21-GE-1,0,desktop:/studio.sh,0,desktop:/Kotlin and Android Development featuring Jetpack by Michael Fazio (z-lib.org).pdf,0,file:///home/chxei/Desktop/Link to Application.desktop,0,desktop:/games,0,desktop:/gameLauncher.sh,0,desktop:/idea.sh,0,desktop:/user_settings.py,0,desktop:/The Only Thing They Fear\\, Is Him.mp3,0,desktop:/strawberry-1.0.0-1.fc34.x86_64.rpm,0,desktop:/NavigationUpdaterSetup.exe,0,desktop:/Arctype-0.9.17.AppImage,0

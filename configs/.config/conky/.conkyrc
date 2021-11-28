@@ -48,8 +48,8 @@ ${voffset 5}ram$font${alignr}$mem / $memmax
 ${membar 4,190}
 ${voffset 7}/ $font ${execi 1 sensors | grep 'Composite' | cut -c16-17 | head -n 1}°C $font${alignr}${fs_used /} / ${fs_size /}
 ${fs_bar 4,190 /}
-${voffset 7}/home $font ${execi 1 sensors | grep 'Composite' | cut -c16-17 | tail -n 1}°C $font${alignr}${fs_used /home} / ${fs_size /home}
-${fs_bar 4,190 /home}
+${voffset 7}data $font ${execi 1 sensors | grep 'Composite' | cut -c16-17 | tail -n 1}°C $font${alignr}${fs_used /media/data} / ${fs_size /media/data}
+${fs_bar 4,190 /media/data}
 ${voffset 7}battery ${battery_percent BAT1}% ${alignr}${battery_time BAT1}
 ${battery_bar 4,190 BAT1}
 GPU ${execi 10 nvidia-smi --format=csv,noheader,nounits --query-gpu=temperature.gpu}°C ${alignr} ${execi 10 nvidia-settings -q [gpu:0]/UsedDedicatedGPUMemory -t}/${exec nvidia-settings -q [gpu:0]/TotalDedicatedGPUMemory -t} MB
@@ -70,11 +70,11 @@ ${top_mem name 3}${goto 105}${top_mem cpu 3}${goto 155}${top_mem mem 3}
 ${voffset 2}#
 $color1${font DejaVu Sans:size=14:bold}Network $font ${hr 2}$color
 ${voffset 2}#
-${voffset 5}upload speed: $alignr${upspeed $gw_iface}
-${voffset 5}download speed: $alignr${downspeed $gw_iface}
-${voffset 5}total uploaded: $alignr${totalup $gw_iface}
-${voffset 5}total dowloaded: $alignr${totaldown $gw_iface}
-${voffset 5}local ip: ${alignr}${addrs $gw_iface}
+${voffset 5}upload speed: $alignr${upspeed wlp3s0}
+${voffset 5}download speed: $alignr${downspeed wlp3s0}
+${voffset 5}total uploaded: $alignr${totalup wlp3s0}
+${voffset 5}total dowloaded: $alignr${totaldown wlp3s0}
+${voffset 5}local ip: ${alignr}${addrs wlp3s0}
 ${voffset 5}global ip: ${alignr}${curl ipinfo.io/ip 2}
 
 ]];

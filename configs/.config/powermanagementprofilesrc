@@ -8,7 +8,7 @@ powerDownAction=16
 triggerLidActionWhenExternalMonitorPresent=true
 
 [AC][SuspendSession]
-idleTime=10860000
+idleTime=18000000
 suspendThenHibernate=false
 suspendType=1
 

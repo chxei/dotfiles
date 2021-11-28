@@ -7,7 +7,8 @@ configFiles=('.config/zsh' '.config/autostart' '.config/conky' '.config/dolphinr
             '.config/kglobalshortcutsrc' '.config/khotkeysrc' '.config/klipperrc' '.config/konsolerc' '.config/kscreenlockerrc' \
             '.config/kservicemenurc' '.config/ksplashrc' '.config/kwinrc' '.config/kxkbrc' '.config/mimeapps.list' '.config/plasma-org.kde.plasma.desktop-appletsrc' \
             '.config/plasmarc' '.config/plasmashellrc' '.config/powermanagementprofilesrc' '.kde/share/config/kdeglobals' \
-            '.config/xsettingsd' '.config/smplayer/playlist.ini' '.config/smplayer/smplayer.ini' '.config/conky' '.config/kitty')
+            '.config/xsettingsd' '.config/smplayer/playlist.ini' '.config/smplayer/smplayer.ini' '.config/conky' '.config/remmina' '.local/share/remmina' \
+            '.local/share/cod')
 
 action=$(dialog --no-items --radiolist 'do you want to backup or restore' 11 30 11 \
 'backup' 'on' \
@@ -30,3 +31,4 @@ fi
 
 #todo emergency restory
 #todo git user name and mail
+#tidal-dl fix location

@@ -47,8 +47,7 @@
       "app": "foliate",
       "description": "ebook reader",
       "state": "off",
-      "source": "flatpak",
-      "package" : "fedora foliate"
+      "source": "dnf"
     },
     {
       "app": "smplayer",
@@ -81,45 +80,39 @@
     {
       "app": "remmina",
       "description": "remote desktop client",
-      "state": "off",
+      "state": "on",
       "source": "dnf"
     },
     {
       "app": "steam",
       "description": "gaming platform",
-      "state": "off",
+      "state": "on",
       "source": "dnf"
     },
     {
       "app": "kdenlive",
       "description": "video editing",
-      "state": "off",
-      "source": "dnf"
-    },
-    {
-      "app": "kitty",
-      "description": "gpu accelerated, fast terminal",
-      "state": "off",
+      "state": "on",
       "source": "dnf"
     },
     {
       "app": "zsh",
       "description": "set customized zsh as default shell",
-      "state": "off",
+      "state": "on",
       "source": "script",
       "script": "installZsh"
     },
     {
       "app": "tidal-dl",
       "description": "download music from tidal",
-      "state": "off",
+      "state": "on",
       "source": "script",
       "script": "installTidalDl"
     },
     {
       "app": "keepassxc",
       "description": "open-source password manager",
-      "state": "off",
+      "state": "on",
       "source": "dnf"
     },
     {
@@ -156,12 +149,10 @@
       "state": "off"
     },
     {
-      "app": "asus rog tools",
-      "description": "kernel with asus rog patches + asusctl",
-      "source": "dnf",
-      "repo": "lukenukem/asus-linux",
-      "package":"asusctl kernel",
-      "state":"off"
+      "app": "org.onlyoffice",
+      "description": "office suite",
+      "state": "on",
+      "source": "flatpak"
     }
   ]
 }

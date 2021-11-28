@@ -1,27 +1,58 @@
 [Desktop Entry]
-DefaultProfile=default.profile
+DefaultProfile=
 
 [Favorite Profiles]
 Favorites=
 
 [MainWindow]
+HDMI-1 eDP-1 Height 1920x1080=1015
+HDMI-1 eDP-1 Width 1920x1080=1920
+HDMI-1 eDP-1 Window-Maximized 1920x1080=true
+HDMI-1 eDP-1 XPosition 1920x1080=1920
+HDMI-1 eDP-1 YPosition 1920x1080=29
+HDMI-A-0 Height 1920x1080=480
+HDMI-A-0 Width 1920x1080=1118
+HDMI-A-0 Window-Maximized 1920x1080=true
+HDMI-A-0 XPosition 1920x1080=401
+HDMI-A-0 YPosition 1920x1080=296
 HDMI-A-0 eDP Height 1080=690
-HDMI-A-0 eDP Height 1920x1080=660
+HDMI-A-0 eDP Height 1440x900=835
+HDMI-A-0 eDP Height 1920x1080=1015
+HDMI-A-0 eDP Width 1440x900=1440
 HDMI-A-0 eDP Width 1920=1176
-HDMI-A-0 eDP Width 1920x1080=1570
+HDMI-A-0 eDP Width 1920x1080=1920
+HDMI-A-0 eDP Window-Maximized 1920x1080=true
 HDMI-A-0 eDP XPosition=2290
-HDMI-A-0 eDP XPosition 1920x1080=2095
+HDMI-A-0 eDP XPosition 1440x900=1920
+HDMI-A-0 eDP XPosition 1920x1080=1920
 HDMI-A-0 eDP YPosition=84
-HDMI-A-0 eDP YPosition 1920x1080=208
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAPTAAAABAAAAAQAAAAIAAAACPwAAAAA
+HDMI-A-0 eDP YPosition 1440x900=29
+HDMI-A-0 eDP YPosition 1920x1080=29
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAOrAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAHABzAGUAcwBzAGkAbwBuAFQAbwBvAGwAYgBhAHIBAAAFkv////8AAAAAAAAAAA==
+StatusBar=Disabled
 ToolBarsMovable=Disabled
-eDP Height 1920x1080=461
-eDP Width 1920x1080=1280
+default Window-Maximized 1920x1080=true
+default XPosition 1920x1080=0
+default YPosition 1920x1080=29
+eDP HDMI-A-0 Window-Maximized 1920x1080=true
+eDP HDMI-A-0 XPosition 1920x1080=1920
+eDP HDMI-A-0 YPosition 1920x1080=29
+eDP Height 1920x1080=1015
+eDP Height 640x480=415
+eDP Width 1920x1080=1920
+eDP Width 640x480=640
 eDP Window-Maximized 1920x1080=true
 eDP XPosition=382
-eDP XPosition 1920x1080=0
+eDP XPosition 1920x1080=640
+eDP XPosition 640x480=0
 eDP YPosition=468
-eDP YPosition 1920x1080=34
+eDP YPosition 1920x1080=29
+eDP YPosition 640x480=29
+eDP-1 HDMI-A-1 Window-Maximized 1920x1080=true
+eDP-1 Window-Maximized 1920x1080=true
+
+[Notification Messages]
+CloseAllEmptyTabs=true
 
 [TabBar]
 NewTabButton=true

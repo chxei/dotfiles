@@ -17,63 +17,81 @@ FontWeight=50
 PreviewSize=22
 
 [General]
-Version=200
+Version=201
 ViewPropsTimestamp=2020,10,27,20,35,40
 
 [IconsMode]
 FontWeight=50
-PreviewSize=32
+PreviewSize=48
 
 [KFileDialog Settings]
-Recent Files[$e]=twitterback.jar,file:$HOME/Desktop/twitter/twitter-java/target/twitterback.jar
-Recent URLs[$e]=file:$HOME/Desktop/twitter/twitter-java/target/,file:$HOME/Desktop/twitter/twitter-java/
+Recent Files[$e]=twitterback.jar,file:///media/data/games/libs/runtimes/Proton-GE/files/bin/wine
+Recent URLs[$e]=file:///media/data/games/libs/runtimes/Proton-GE/files/bin/
 iconViewIconSize=43
 
 [KPropertiesDialog]
 HDMI-A-0 eDP Height 1080=445
-HDMI-A-0 eDP Height 1920x1080=531
+HDMI-A-0 eDP Height 1920x1080=606
 HDMI-A-0 eDP Width 1920=432
-HDMI-A-0 eDP Width 1920x1080=484
+HDMI-A-0 eDP Width 1920x1080=483
 Height 1080=443
 Width 1920=407
-eDP Height 1920x1080=509
-eDP Width 1920x1080=417
+eDP Height 1920x1080=606
+eDP Width 1920x1080=483
+eDP-1 HDMI-A-1 Height 1920x1080=606
+eDP-1 HDMI-A-1 Width 1920x1080=483
 
 [MainWindow]
 HDMI-A-0 Height 1080=661
+HDMI-A-0 Height 1920x1080=1015
 HDMI-A-0 Width 1920=1272
+HDMI-A-0 Width 1920x1080=1920
 HDMI-A-0 Window-Maximized 1050x1680=true
 HDMI-A-0 Window-Maximized 1080x1920=true
-HDMI-A-0 Window-Maximized 1920x1080=true
 HDMI-A-0 XPosition=0
+HDMI-A-0 XPosition 1920x1080=0
 HDMI-A-0 YPosition=31
+HDMI-A-0 YPosition 1920x1080=29
 HDMI-A-0 eDP Height 1080=658
-HDMI-A-0 eDP Height 1920x1080=686
+HDMI-A-0 eDP Height 1920x1080=1051
 HDMI-A-0 eDP Width 1920=1272
-HDMI-A-0 eDP Width 1920x1080=1280
+HDMI-A-0 eDP Width 1920x1080=1920
 HDMI-A-0 eDP Window-Maximized 1080x1920=true
+HDMI-A-0 eDP Window-Maximized 1440x900=true
+HDMI-A-0 eDP Window-Maximized 1920x1080=true
 HDMI-A-0 eDP XPosition=2065
-HDMI-A-0 eDP XPosition 1920x1080=2560
+HDMI-A-0 eDP XPosition 1440x900=1920
+HDMI-A-0 eDP XPosition 1920x1080=0
 HDMI-A-0 eDP YPosition=32
-HDMI-A-0 eDP YPosition 1920x1080=190
+HDMI-A-0 eDP YPosition 1440x900=29
+HDMI-A-0 eDP YPosition 1920x1080=29
 Height 1080=1014
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAwAAAAAAAAC4AAADy/wCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAyAAAAmAAAAAoBAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAlAAADywAAAF0BAAADAAAAAQAAALQAAAPL/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAQAAACUAAAPLAAABDgEAAAMAAAADAAAE+AAAALb8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAE+AAAAAoBAAADAAAGEgAAA8sAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+State=AAAA/wAAAAD9AAAAAwAAAAAAAACyAAADyfwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAoBAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAuAAADyQAAAF0BAAADAAAAAQAAALgAAAPJ/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAQAAAC4AAAPJAAABDwEAAAMAAAADAAAAAAAAAAD8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAA/////wAAAAoBAAADAAAGFAAAA8kAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
 ToolBarsMovable=Disabled
 Width 1920=1920
 Window-Maximized 1080x1920=true
+eDP HDMI-A-0 Height 1920x1080=1014
+eDP HDMI-A-0 Width 1920x1080=1920
 eDP HDMI-A-0 Window-Maximized 1080x1920=true
+eDP HDMI-A-0 Window-Maximized 1920x1080=true
 eDP HDMI-A-0 XPosition=0
+eDP HDMI-A-0 XPosition 1920x1080=1920
 eDP HDMI-A-0 YPosition=30
+eDP HDMI-A-0 YPosition 1920x1080=48
 eDP Height 1080=658
-eDP Height 1920x1080=1008
+eDP Height 1920x1080=1015
 eDP Width 1920=1272
 eDP Width 1920x1080=1920
 eDP Window-Maximized 1080x1920=true
+eDP Window-Maximized 1920x1080=true
 eDP XPosition=0
 eDP XPosition 1920x1080=0
 eDP YPosition=32
-eDP YPosition 1920x1080=34
+eDP YPosition 1920x1080=29
+eDP-1 HDMI-A-1 Height 1920x1080=1014
+eDP-1 HDMI-A-1 Width 1920x1080=1920
+eDP-1 HDMI-A-1 Window-Maximized 1920x1080=true
 
 [MainWindow][Toolbar mainToolBar]
 IconSize=16
@@ -83,7 +101,7 @@ ConfirmEmptyTrash=true
 
 [Open-with settings]
 CompletionMode=1
-History=smpl,smp,kate,bless,fol,db,idea,intel,dra,kwr
+History=kate,qbi,elisa,/media/data/games/libs/runtimes/Proton-GE/files/bin/wine,opera,intel,inte,kde,smpl,smp,bless,fol,db,idea,dra
 
 [PreviewSettings]
 Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail

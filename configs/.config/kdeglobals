@@ -122,20 +122,19 @@ ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
 [DirSelect Dialog]
-DirSelectDialog Size=852,596
-History Items[$e]=file:///media/data/music,file:///media/data/backup,file:///media/data/games/doom,file:///media/data/games,file:$HOME/Downloads/extension_1_34_0_0,file:$HOME/Downloads,file:$HOME/Downloads,file:///var,file:$HOME/.themes/Ant-Dark,file:$HOME/Downloads,file:$HOME/Downloads,file:///media/data/wallpapers
+DirSelectDialog Size=846,586
+History Items[$e]=file:$HOME/Music,file:$HOME/Music,file:$HOME/Music,file:$HOME/Music,file:$HOME/Downloads,file:$HOME/Downloads,file:///media/data/music,file:///media/data,file:///,file:$HOME/VirtualBox VMs/shared,file:///media/data/backup,file:///media/data/games/doom,file:///media/data/games,file:$HOME/Downloads/extension_1_34_0_0,file:$HOME/Downloads,file:$HOME/Downloads,file:///var,file:$HOME/.themes/Ant-Dark,file:$HOME/Downloads,file:$HOME/Downloads,file:///media/data/wallpapers
 
 [General]
 AllowKDEAppsToRememberWindowPositions=false
-BrowserApplication=chromium-browser-privacy.desktop
+BrowserApplication=opera.desktop
 ColorScheme=BreezeDark
 Name=Breeze Dark
-TerminalApplication=kitty
 shadeSortColumn=true
 toolBarFont=Sans Serif,10,-1,5,50,0,0,0,0,0
 
 [Icons]
-Theme=breeze-dark
+Theme=black-dark
 
 [KDE]
 LookAndFeelPackage=org.kde.breezedark.desktop
@@ -147,7 +146,7 @@ widgetStyle=Breeze
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=true
+Breadcrumb Navigation=false
 Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
