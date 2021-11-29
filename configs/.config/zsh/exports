@@ -1,0 +1,38 @@
+if [[ $SUDO_USER != '' && $SUDO_USER != 'root' ]] then
+    HOME=/home/$SUDO_USER;
+elif [[ $HOME == '/root' ]] then
+    for potentialHome in /home/*; do
+        [ -s "$potentialHome/Desktop" ] || continue
+        HOME=$potentialHome
+    done
+fi
+
+export JAVA_HOME=$HOME/.local/bin/graalvm-ee
+export LOCALBIN=$HOME/.local/bin
+export PATH=$PATH:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$PATH:/media/data/bin
+export PATH=$PATH:$LOCALBIN
+export ZSH_PLUGINS=$LOCALBIN/zsh_plugins
+export FZF_DEFAULT_COMMAND='fd --color=never -H -I -E .git'
+export FZF_DEFAULT_OPTS='--height 75% --multi --reverse --preview "bat --style=numbers --color=always --line-range :500 {}"'
+export TZ="Asia/Tbilisi"
+export GRAALVM_HOME=$HOME/.local/bin/graalvm-ee
+
+export libsDir="/media/data/games/libs"
+export gamesDir="/media/data/games"
+export WINEDEBUG="-all"
+export UPDATEPREFIX="yes"
+export WINEPREFIX="$libsDir/prefix";
+export WINETRICKS="$libsDir/winetricks";
+export PREFIX="$WINEPREFIX";
+
+export EDITOR=code
+export PAGER=less
+export LESSHISTSIZE=0
+export HISTSIZE=655360
+export SAVEHIST=$HISTSIZE
+
+setxkbmap -option caps:menu

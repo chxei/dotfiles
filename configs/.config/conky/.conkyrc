@@ -1,8 +1,8 @@
 conky.config = {
     use_xft = true,
-
+    
     update_interval = 1,
-
+    
     own_window = true,
     own_window_class = 'Conky',
     own_window_argb_visual = true,
@@ -10,25 +10,25 @@ conky.config = {
     own_window_hints = 'undecorated,below,skip_taskbar,sticky,skip_pager',
     own_window_colour = '000000',
     double_buffer = true,
-
+    
     top_name_width = 10,
     minimum_width = 190,
     maximum_width = 190,
-
+    
     draw_borders = false,
     draw_outline = false,
     draw_shades = false,
     draw_graph_borders = false,
-
+    
     default_color = '#DEE2E6',
     alignment = 'middle_right',
     xinerama_head = 2,
     cpu_avg_samples = 2,
     override_utf8_locale = true,
-
+    
     gap_y = 25,
     gap_x = 10,
-
+    
     color1 = '#ADB5BD',
     color2 = '#F8F9FA',
     font = 'Open Sans:size=10',

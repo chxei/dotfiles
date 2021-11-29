@@ -6,14 +6,14 @@ installZsh(){
     #change default shell for zsh
     chsh -s /bin/zsh;
     sudo chsh -s /bin/zsh;
-    
+
     #download some cool zsh plugins
     cd ~/temp;
     git clone https://github.com/dim-an/cod.git;
     cd cod;
     go build;
     mv cod ~/.local/bin;
-    
+
     mkdir ~/.local/bin/zsh_plugins/ -p;
     cd ~/.local/bin/zsh_plugins;
     git clone https://github.com/denysdovhan/spaceship-prompt.git;
@@ -21,14 +21,19 @@ installZsh(){
     git clone https://github.com/zsh-users/zsh-autosuggestions.git;
     git clone https://github.com/zsh-users/zsh-completions.git;
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git;
-    wget -qo - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
-    wget -qo - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/command-not-found/command-not-found.plugin.zsh
-    wget -qo - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/common-aliases/common-aliases.plugin.zsh
-    wget -qo - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/extract/extract.plugin.zsh
-    wget -qo - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/bgnotify/bgnotify.plugin.zsh
+    wget -qo - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh;
+    wget -qo - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/command-not-found/command-not-found.plugin.zsh;
+    wget -qo - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/common-aliases/common-aliases.plugin.zsh;
+    wget -qo - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/extract/extract.plugin.zsh;
+    wget -qo - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/bgnotify/bgnotify.plugin.zsh;
+    wget -qo - https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh;
+    wget -qo - https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh;
+    mv key-bindings.zsh fzf-key-bindings.zsh;
+    mv completion.zsh fzf-completion.zsh;
     ##for gll alias
     git config --global alias.ll 'log --graph --format="%C(yellow)%h%C(red)%d%C(reset) - %C(bold green)(%ar)%C(reset) %s %C(blue)<%an>%C(reset)"'
     echo "export ZDOTDIR=/home/$USER/.config/zsh" | sudo tee -a /etc/zshenv;
+    echo "source /home/$USER/.config/zsh/exports" | sudo tee -a /etc/zshenv;
 }
 
 installZoom(){

@@ -15,9 +15,8 @@ mkdir ~/temp; #
 
 #cleanups
 sudo dnf remove Yakuake firefox dragon kmahjongg kpat kmines kolourpaint kmail konversation kruler krdc krfb kcolorchooser akregator kmousetool ktorrent -y;
-sudo dnf remove k3b kamoso calligra-core kaddressbook korganizer kcharselect kmouth kwrite kmag dnfdragora krusader juk -y;
+sudo dnf remove k3b kamoso calligra-core kaddressbook korganizer kcharselect kmouth kwrite kmag dnfdragora krusader juk cups -y;
 sudo dnf remove 'libreoffice*';
-
 
 #disable useless services
 sudo systemctl disable sssd.service;

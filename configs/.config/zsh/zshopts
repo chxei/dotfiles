@@ -1,0 +1,73 @@
+TERM=vt100
+bgnotify_threshold=60
+
+#options
+setopt correct                                                  # Auto correct mistakes
+setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
+setopt nocaseglob                                               # Case insensitive globbing
+setopt rcexpandparam                                            # Array expension with parameters
+setopt numericglobsort                                          # Sort filenames numerically when it makes sense
+setopt nobeep                                                   # No beep
+setopt share_history                                            # Immediately append history instead of overwriting
+setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
+setopt autocd                                                   # if only directory path is entered, cd there.
+setopt cdablevars                                               # add ~/ to dir if its not found in current dir # არ მუშაობს :pain:
+setopt complete_aliases
+setopt HISTREDUCEBLANKS
+limit coredumpsize 0
+
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
+zstyle ':completion:*' rehash true                              # automatically find new executables in path
+zstyle ':completion:*' menu select                              # arrow navigation in autocomplete
+#Speed up completions
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.cache/zsh/
+
+
+HISTFILE=~/.config/zsh/zhistory
+WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
+
+
+
+#autocomplete, highlighting and suggestions
+autoload -Uz compinit; compinit
+fpath=($ZSH_PLUGINS/zsh-completions/src $fpath)
+source $ZSH_PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH_PLUGINS/command-not-found.plugin.zsh
+source $ZSH_PLUGINS/common-aliases.plugin.zsh
+source $ZSH_PLUGINS/bgnotify.plugin.zsh
+source $ZSH_PLUGINS/extract.plugin.zsh
+source $ZSH_PLUGINS/fzf-key-bindings.zsh
+source $ZSH_PLUGINS/fzf-completion.zsh
+source $ZSH_PLUGINS/sudo.plugin.zsh
+eval "$(lua $ZSH_PLUGINS/z.lua/z.lua --init zsh enhanced once fzf)"
+source <(cod init $$ zsh)
+#todo fzf ctrl + t not working; source /usr/share/fzf/shell/key-bindings.zsh;
+
+
+
+# key bindings
+# Navigate words with ctrl+arrow keys
+bindkey '^[Oc' forward-word                                     #
+bindkey '^[Od' backward-word                                    #
+bindkey '^[[1;5D' backward-word                                 #
+bindkey '^[[1;5C' forward-word                                  #
+bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
+bindkey '^[[Z' undo                                             # Shift+tab undo last action
+bindkey '^[' autosuggest-clear
+bindkey '[3;5~' delete-word                                     # ctrl + del delete current word
+
+#theme
+source $ZSH_PLUGINS/spaceship-prompt/spaceship.zsh-theme
+SPACESHIP_PROMPT_ADD_NEWLINE="false" #default true
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true" #default false
+SPACESHIP_PROMPT_PREFIXES_SHOW="true"
+SPACESHIP_PROMPT_SUFFIXES_SHOW="true"
+SPACESHIP_TIME_SHOW="true"
+SPACESHIP_USER_SHOW="always"
+SPACESHIP_USER_COLOR="yellow"
+SPACESHIP_USER_COLOR_ROOT="red"
+SPACESHIP_EXIT_CODE_SHOW="true"
