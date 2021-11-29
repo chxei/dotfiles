@@ -64,6 +64,8 @@ sudo snap set system refresh.retain=2; #allow only 2 older versions of snaps. th
 #flatpacks
 sudo dnf install flatpak -y;
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo; #flathub repositorie
+sudo flatpak remote-ls
+sudo flatpak remote-delete fedora
 
 #wallpaper
 mkdir -p ~/.local/share/wallpapers;

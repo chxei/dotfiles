@@ -14,7 +14,7 @@ autoload=false
 autoload=true
 
 [Module-colord]
-autoload=true
+autoload=false
 
 [Module-device_automounter]
 autoload=false
@@ -26,7 +26,7 @@ autoload=true
 autoload=true
 
 [Module-kded_accounts]
-autoload=true
+autoload=false
 
 [Module-kded_bolt]
 autoload=true
