@@ -43,7 +43,8 @@ source $ZSH_PLUGINS/extract.plugin.zsh
 source $ZSH_PLUGINS/fzf-key-bindings.zsh
 source $ZSH_PLUGINS/fzf-completion.zsh
 source $ZSH_PLUGINS/sudo.plugin.zsh
-eval "$(lua $ZSH_PLUGINS/z.lua/z.lua --init zsh enhanced once fzf)"
+#eval "$(lua $ZSH_PLUGINS/z.lua/z.lua --init zsh enhanced once fzf)"
+#todo z.lua not working
 source <(cod init $$ zsh)
 #todo fzf ctrl + t not working; source /usr/share/fzf/shell/key-bindings.zsh;
 

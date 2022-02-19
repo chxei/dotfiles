@@ -73,7 +73,7 @@ if [[ $nvidia=='yes' ]]; then
     sudo dnf install akmod-nvidia vulkan vulkan-loader vdpauinfo libva-vdpau-driver libva-utils xorg-x11-drv-nvidia-cuda-libs xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-power -y;
     sudo akmods --force;
     sudo dracut --force;
-    sudo grubby --update-kernel=ALL --args='rd.driver.blacklist=nouveau modprobe.blacklist=nouveau rhgb quiet nvidia-drm.modeset=1';
+    sudo grubby --update-kernel=ALL --args='rd.driver.blacklist=nouveau modprobe.blacklist=nouveau rhgb quiet nvidia-drm.modeset=1 mitigations=off';
 fi
 
 for key in $(jq '.[] | map(select(.state == "on")) | keys | .[]' $baseDir/appsList.json); do

@@ -1,0 +1,11 @@
+/* Allow members of the wheel group to execute any actions
+ * without password authentication, similar to "sudo NOPASSWD:"
+ * cp /etc/polkit-1/rules.d/
+ * install seahorse and set login password to null
+ * set kde wallet password to null
+ */
+polkit.addRule(function(action, subject) {
+    if (subject.isInGroup("wheel")) {
+        return polkit.Result.YES;
+    }
+});

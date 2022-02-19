@@ -1,50 +1,25 @@
 [ActionsWidget]
-ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAekAAAACAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAACAAAA+gAAAAEAAAAAAAAA7wAAAAEAAAAAAAAD6AAAAABk
+ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdAAAAACAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAACAAAA+gAAAAEAAAAAAAAA1gAAAAEAAAAAAAAD6AAAAABk
 
 [ConfigDialog]
-HDMI-A-0 eDP Height 1080=505
-HDMI-A-0 eDP Width 1920=716
-Height 1080=483
-Width 1920=623
-eDP Height 1920x1080=505
-eDP Width 1920x1080=716
+HDMI-A-0 eDP Height 1920x1080=508
+HDMI-A-0 eDP Width 1920x1080=595
 
 [General]
 Number of Actions=0
 
 [KFileDialog Settings]
-Recent Files[$e]=1chadweisser-rainydaymanhattan.jpg,file:///media/data/bin/Postman/app/resources/app/assets/icon.png,file:///media/data/wallpapers/medusa.jpg,file:///media/data/wallpapers/wallhaven-z8myqv.png,file:///media/data/wallpapers/wallhaven-vg8zq3.jpg,file:///media/data/wallpapers/yj21yqooldv61.jpg,file:///media/data/wallpapers/22558727650_f158b88113_h.jpg,file:///media/data/wallpapers/38726662-ambient-wallpapers.jpg,file:///media/data/wallpapers/221297.png,file:///media/data/wallpapers/19-06-10.jpg,file:///media/data/wallpapers/11_cameronbashaw_webbed.jpg,file:///media/data/wallpapers/10_marknelson_stepssnow_b.jpg,file:///media/data/wallpapers/9olgagórka-oldtownparis.jpg,file:///media/data/wallpapers/9jaq6hz5iib41.png
-Recent URLs[$e]=file:///media/data/wallpapers/,file:$HOME/Downloads/,file:$HOME/,file:$HOME/Documents/,file:///media/data/workplace/DotFiles/assets/,file:$HOME/.local/share/wallpapers/,file:///media/data/,file:$HOME/Desktop/,file:$HOME/Pictures/,file:///media/data/bin/Postman/app/resources/app/assets/
-detailViewIconSize=0
-iconViewIconSize=43
+Recent Files[$e]=chrome,file:///media/data/bin/idea/bin/idea.png,file:///media/data/bin/ungoogled-chromium/chrome
+Recent URLs[$e]=file:///media/data/bin/ungoogled-chromium/,file:$HOME/,file:///media/data/bin/idea/bin/
+detailViewIconSize=16
 
 [KPropertiesDialog]
-HDMI-A-0 eDP Height 1080=446
-HDMI-A-0 eDP Height 1920x1080=454
-HDMI-A-0 eDP Width 1920=1185
-HDMI-A-0 eDP Width 1920x1080=604
-eDP Height 1920x1080=453
-eDP Width 1920x1080=410
-
-[Notification Messages]
-klipperClearHistoryAskAgain=false
+HDMI-A-0 eDP Height 1920x1080=464
+HDMI-A-0 eDP Width 1920x1080=410
 
 [Open-with settings]
 CompletionMode=1
-History=bles
-
-[PlasmaRunnerManager]
-LaunchCounts=4 services_applications:firefox.desktop,2 services_applications:componentchooser.desktop,6 services_applications:autostart.desktop,4 services_applications:slack.desktop,1 services_applications:com.rafaelmardojai.Blanket.desktop,2 services_applications:vlc.desktop,1 services_applications:strimio-desktop_strimio-desktop.desktop,1 services_applications:org.kde.krename.desktop,2 services_applications:bitwarden_bitwarden.desktop,2 services_applications:org.kde.spectacle.desktop,1 services_applications:net.lutris.Lutris.desktop,1 services_applications:com.slack.Slack.desktop,1 services_applications:chromium-browser-privacy.desktop,4 services_applications:xyz.z3ntu.razergenie.desktop,8 services_applications:org.joplinapp.joplin.desktop,2 services_applications:gitkraken_gitkraken.desktop,3 services_applications:mailspring_mailspring.desktop,3 services_applications:org.kde.krusader.desktop,2 services_applications:virt-manager.desktop,1 services_applications:uget-gtk.desktop,1 services_applications:kcm_touchpad.desktop,4 services_applications:steam.desktop,13 services_applications:org.kde.kcalc.desktop,1 services_applications:slack_slack.desktop,3 services_applications:org.mageia.dnfdragora.desktop,2 services_applications:fontinst.desktop,1 services_applications:kite.desktop,2 services_applications:io.dbeaver.DBeaverCommunity.desktop,1 services_applications:Dota 2.desktop,13 services_applications:nvidia-settings.desktop,1 services_applications:org.gnome.Podcasts.desktop,2 services_applications:org.kde.dragonplayer.desktop,1 services_applications:devinfo.desktop,1 services_applications:kcm_fonts.desktop,2 services_applications:polychromatic-controller.desktop,1 services_applications:kcm_kscreen.desktop,9 services_applications:vmware-player.desktop,3 services_applications:org.kde.falkon.desktop,2 services_applications:org.kde.partitionmanager.desktop,3 services_applications:org.kde.plasma.emojier.desktop,3 services_applications:org.kde.kate.desktop,1 services_applications:org.keepassxc.KeePassXC.desktop,1 services_applications:brave-browser.desktop,2 services_applications:simplescreenrecorder.desktop,2 services_applications:com.github.persepolisdm.persepolis.desktop,1 services_applications:com.github.tchx84.Flatseal.desktop,4 services_applications:zoom-client_zoom-client.desktop,2 services_applications:org.kde.kdenlive.desktop,1 services_applications:The Witcher 3 Wild Hunt.desktop,3 services_applications:Zoom.desktop,9 services_applications:kvantummanager.desktop,1 services_applications:kcm_keys.desktop,1 services_applications:skypeforlinux.desktop,1 services_applications:org.kde.elisa.desktop,1 services_applications:com.nextcloud.desktopclient.nextcloud.desktop,1 services_applications:com.github.needleandthread.vocal.desktop,7 services_applications:discord.desktop,1 services_applications:org.kde.kmines.desktop,3 services_applications:opera.desktop,1 services_applications:com.github.Eloston.UngoogledChromium.desktop,1 services_applications:com.getpostman.Postman.desktop,1 services_applications:xonotic.desktop,11 services_applications:org.rnd2.cpupower_gui.desktop,12 services_applications:org.kde.discover.desktop,1 services_applications:com.github.needleandthread.vocal.desktop?action=AboutDialog,1 services_applications:virtualbox.desktop,2 services_applications:de.haeckerfelix.Shortwave.desktop,12 services_applications:smplayer.desktop,10 services_applications:org.kde.konsole.desktop,8 services_applications:grub-customizer.desktop,2 services_applications:firewall-config.desktop
-
-[PlasmaViews][Panel 27][Defaults]
-maxLength=1920
-minLength=1920
-thickness=36
-
-[PlasmaViews][Panel 27][Horizontal1920]
-maxLength=1920
-minLength=1920
-thickness=36
+History=desk
 
 [PlasmaViews][Panel 3][Defaults]
 thickness=32
@@ -54,11 +29,9 @@ thickness=32
 
 [ScreenConnectors]
 0=HDMI-A-0
-1=eDP
-2=:0.0
-3=HDMI-A-1
-4=Screen48
-5=eDP-1
+1=HDMI-A-1
+2=DP-1-0
+3=eDP
 
 [Updates]
-performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/00-start-here-2.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/unlock_widgets.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/maintain_existing_desktop_icon_sizes.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/containmentactions_middlebutton.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/systemloadviewer_systemmonitor.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/digitalclock_rename_timezonedisplay_key.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/klipper_clear_config.js
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/klipper_clear_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/unlock_widgets.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/maintain_existing_desktop_icon_sizes.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/systemloadviewer_systemmonitor.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/containmentactions_middlebutton.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/00-start-here-2.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/digitalclock_rename_timezonedisplay_key.js

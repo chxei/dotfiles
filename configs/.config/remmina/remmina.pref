@@ -29,7 +29,7 @@ keystrokes=Send hello world§hello world\\n
 main_width=600
 main_height=400
 main_maximize=true
-main_sort_column_id=3
+main_sort_column_id=5
 main_sort_order=0
 expanded_group=
 toolbar_pin_down=false
@@ -84,6 +84,7 @@ rdp_quality_9=180
 rdp_deviceScaleFactor=0
 rdp_desktopScaleFactor=0
 rdp_desktopOrientation=0
+rdp_kbd_remap=
 
 [ssh_colors]
 background=rgb(213,204,186)

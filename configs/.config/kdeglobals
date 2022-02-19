@@ -24,129 +24,132 @@ IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=77,77,77
+BackgroundAlternate=30,87,116
 BackgroundNormal=49,54,59
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
-ForegroundInactive=189,195,199
-ForegroundLink=41,128,185
+ForegroundInactive=161,169,177
+ForegroundLink=29,153,243
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=239,240,241
+ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
-ForegroundVisited=127,140,141
+ForegroundVisited=155,89,182
 
 [Colors:Complementary]
-BackgroundAlternate=59,64,69
-BackgroundNormal=49,54,59
-DecorationFocus=30,146,255
-DecorationHover=61,174,230
-ForegroundActive=246,116,0
-ForegroundInactive=175,176,179
-ForegroundLink=61,174,230
-ForegroundNegative=237,21,21
-ForegroundNeutral=201,206,59
-ForegroundNormal=239,240,241
-ForegroundPositive=17,209,22
-ForegroundVisited=61,174,230
+BackgroundAlternate=30,87,116
+BackgroundNormal=42,46,50
+DecorationFocus=61,174,233
+DecorationHover=61,174,233
+ForegroundActive=61,174,233
+ForegroundInactive=161,169,177
+ForegroundLink=29,153,243
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=252,252,252
+ForegroundPositive=39,174,96
+ForegroundVisited=155,89,182
 
 [Colors:Header]
-BackgroundAlternate=77,77,77
+BackgroundAlternate=42,46,50
 BackgroundNormal=49,54,59
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
-ForegroundInactive=189,195,199
-ForegroundLink=41,128,185
+ForegroundInactive=161,169,177
+ForegroundLink=29,153,243
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=239,240,241
+ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
-ForegroundVisited=127,140,141
+ForegroundVisited=155,89,182
+
+[Colors:Header][Inactive]
+BackgroundAlternate=49,54,59
+BackgroundNormal=42,46,50
+DecorationFocus=61,174,233
+DecorationHover=61,174,233
+ForegroundActive=61,174,233
+ForegroundInactive=161,169,177
+ForegroundLink=29,153,243
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=252,252,252
+ForegroundPositive=39,174,96
+ForegroundVisited=155,89,182
 
 [Colors:Selection]
-BackgroundAlternate=29,153,243
+BackgroundAlternate=30,87,116
 BackgroundNormal=61,174,233
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=252,252,252
-ForegroundInactive=239,240,241
+ForegroundInactive=161,169,177
 ForegroundLink=253,188,75
-ForegroundNegative=218,68,83
-ForegroundNeutral=246,116,0
-ForegroundNormal=239,240,241
-ForegroundPositive=39,174,96
-ForegroundVisited=189,195,199
+ForegroundNegative=176,55,69
+ForegroundNeutral=198,92,0
+ForegroundNormal=252,252,252
+ForegroundPositive=23,104,57
+ForegroundVisited=155,89,182
 
 [Colors:Tooltip]
-BackgroundAlternate=77,77,77
+BackgroundAlternate=42,46,50
 BackgroundNormal=49,54,59
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
-ForegroundInactive=189,195,199
-ForegroundLink=41,128,185
+ForegroundInactive=161,169,177
+ForegroundLink=29,153,243
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=239,240,241
+ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
-ForegroundVisited=127,140,141
+ForegroundVisited=155,89,182
 
 [Colors:View]
-BackgroundAlternate=49,54,59
-BackgroundNormal=35,38,41
+BackgroundAlternate=35,38,41
+BackgroundNormal=27,30,32
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
-ForegroundInactive=189,195,199
-ForegroundLink=41,128,185
+ForegroundInactive=161,169,177
+ForegroundLink=29,153,243
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=239,240,241
+ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
-ForegroundVisited=127,140,141
+ForegroundVisited=155,89,182
 
 [Colors:Window]
-BackgroundAlternate=77,77,77
-BackgroundNormal=49,54,59
+BackgroundAlternate=49,54,59
+BackgroundNormal=42,46,50
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
-ForegroundInactive=189,195,199
-ForegroundLink=41,128,185
+ForegroundInactive=161,169,177
+ForegroundLink=29,153,243
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=239,240,241
+ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
-ForegroundVisited=127,140,141
+ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
-DirSelectDialog Size=846,586
-History Items[$e]=file:$HOME/Music,file:$HOME/Music,file:$HOME/Music,file:$HOME/Music,file:$HOME/Downloads,file:$HOME/Downloads,file:///media/data/music,file:///media/data,file:///,file:$HOME/VirtualBox VMs/shared,file:///media/data/backup,file:///media/data/games/doom,file:///media/data/games,file:$HOME/Downloads/extension_1_34_0_0,file:$HOME/Downloads,file:$HOME/Downloads,file:///var,file:$HOME/.themes/Ant-Dark,file:$HOME/Downloads,file:$HOME/Downloads,file:///media/data/wallpapers
+DirSelectDialog Size=1384,598
+History Items[$e]=file:///media/data,file:$HOME/Videos,file:///usr,file:$HOME/.config/ungoogled-chromium/NativeMessagingHosts,file:$HOME/.config/chromium/NativeMessagingHosts,file:$HOME/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/NativeMessagingHosts,file:///var/lib/flatpak/app/com.github.Eloston.UngoogledChromium/current/5df5a6b385d97aa22dc96326b1092d3bfac0e4c0985c5988f2f0a16df0c10e94/files/chromium/native-messaging-hosts,file:///var/lib/flatpak/app/com.github.Eloston.UngoogledChromium/x86_64/stable/5df5a6b385d97aa22dc96326b1092d3bfac0e4c0985c5988f2f0a16df0c10e94/files/chromium,file:///var/lib/flatpak/app/com.github.Eloston.UngoogledChromium/current/5df5a6b385d97aa22dc96326b1092d3bfac0e4c0985c5988f2f0a16df0c10e94/files/chromium/extensions,file:///var/lib/flatpak/app/com.github.Eloston.UngoogledChromium/x86_64/stable,file:///run/media/chxei/data/workplace/DotFiles
 
 [General]
-AllowKDEAppsToRememberWindowPositions=false
-BrowserApplication=opera.desktop
-ColorScheme=BreezeDark
-Name=Breeze Dark
-shadeSortColumn=true
-toolBarFont=Sans Serif,10,-1,5,50,0,0,0,0,0
-
-[Icons]
-Theme=black-dark
+BrowserApplication=ungoogled-chromium.desktop
+toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 
 [KDE]
 LookAndFeelPackage=org.kde.breezedark.desktop
-ShowDeleteCommand=false
-SingleClick=false
-contrast=4
-widgetStyle=Breeze
 
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=false
+Breadcrumb Navigation=true
 Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
@@ -159,19 +162,16 @@ Show hidden files=true
 Sort by=Name
 Sort directories first=true
 Sort reversed=false
-Speedbar Width=146
-View Style=Simple
+Speedbar Width=138
+View Style=DetailTree
 
-[KShortcutsDialog Settings]
-Dialog Size=621,480
-
-[PreviewSettings]
-MaximumRemoteSize=0
+[Shortcuts]
+RenameFile=Ctrl+Shift+R; F2
 
 [WM]
 activeBackground=49,54,59
-activeBlend=255,255,255
-activeForeground=239,240,241
-inactiveBackground=49,54,59
-inactiveBlend=75,71,67
-inactiveForeground=127,140,141
+activeBlend=252,252,252
+activeForeground=252,252,252
+inactiveBackground=42,46,50
+inactiveBlend=161,169,177
+inactiveForeground=161,169,177

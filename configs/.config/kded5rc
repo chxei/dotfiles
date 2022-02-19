@@ -8,7 +8,7 @@ autoload=true
 autoload=true
 
 [Module-browserintegrationreminder]
-autoload=false
+autoload=true
 
 [Module-colorcorrectlocationupdater]
 autoload=true
@@ -17,7 +17,7 @@ autoload=true
 autoload=false
 
 [Module-device_automounter]
-autoload=false
+autoload=true
 
 [Module-freespacenotifier]
 autoload=true
@@ -29,16 +29,19 @@ autoload=true
 autoload=false
 
 [Module-kded_bolt]
-autoload=true
+autoload=false
 
 [Module-kded_dnssdwatcher]
-autoload=false
+autoload=true
 
 [Module-keyboard]
 autoload=true
 
 [Module-khotkeys]
 autoload=true
+
+[Module-kmixd]
+autoload=false
 
 [Module-kscreen]
 autoload=true
@@ -58,8 +61,11 @@ autoload=true
 [Module-networkstatus]
 autoload=true
 
+[Module-plasmavault]
+autoload=true
+
 [Module-printmanager]
-autoload=false
+autoload=true
 
 [Module-proxyscout]
 autoload=true
@@ -67,14 +73,14 @@ autoload=true
 [Module-remotenotifier]
 autoload=true
 
+[Module-smart]
+autoload=false
+
 [Module-smbwatcher]
-autoload=true
+autoload=false
 
 [Module-statusnotifierwatcher]
 autoload=true
 
 [Module-touchpad]
 autoload=true
-
-[PlasmaBrowserIntegration]
-shownCount=1

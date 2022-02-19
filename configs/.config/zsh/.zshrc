@@ -11,8 +11,4 @@ source ~/.config/zsh/exports
 source ~/.config/zsh/zshopts
 source ~/.config/zsh/aliases
 
-
-#sdkman
-export SDKMAN_DIR=$HOME/.sdkman
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-#
+eval "$(lua $ZSH_PLUGINS/z.lua/z.lua --init zsh enhanced once fzf)"

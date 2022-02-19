@@ -12,7 +12,7 @@ installZsh(){
     git clone https://github.com/dim-an/cod.git;
     cd cod;
     go build;
-    mv cod ~/.local/bin;
+    mv cod ~/.local/bin/;
 
     mkdir ~/.local/bin/zsh_plugins/ -p;
     cd ~/.local/bin/zsh_plugins;

@@ -1,23 +1,28 @@
 # Alias section
 alias open="xdg-open"
+alias sudo='sudo ' #allow aliases to be used with sudo
+alias dmesg="dmesg -L=always" #colored dmesg
+
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
-alias exa='exa --time-style=long-iso -alh'
+alias exa='exa --time-style=long-iso --git --icons --classify --group-directories-first --group -lbhHigUmuSa'
+alias tree='exa --tree'
 alias ll='ls -allh'
 alias ls='ls -h --color=auto'
 alias pacpurge='sudo pacman -Rsn $(pacman -Qdtq)'
 alias pacpuurge='sudo pacman -Rsn $(pacman -Qdttq)'
 alias vim='nvim'
 alias cat='bat'
+alias dnf='dnf --color=always'
 alias grep="grep --color=auto"
 alias recvkeys='gpg --keyserver keys.gnupg.net --recv-keys'
-alias zrc='code ~/.config/.zshrc'
+alias zrc='code ~/.config/zsh/.zshrc'
 alias cpumonitor='watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""'
 alias screenon='xrandr --output HDMI-A-0 --primary --mode 1920x1080 --refresh 144.00 --output eDP --left-of HDMI-A-0; xset dpms force on;'
 alias screenoff='xrandr --output HDMI-A-0 --off --output eDP --primary; sleep 3; xset dpms force off'
-alias prime-run='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
+alias prime-run='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only'
 alias fnano='fzf_find_edit nano'
 alias fkate='fzf_find_edit kate'
 alias fcode='fzf_find_edit code'
@@ -100,7 +105,7 @@ fzf_find_edit() {
 }
 
 grub-update(){
-    if [[ "$(uname -n)" == 'fedora' ]]; then
+    if [[ "$(uname -n)" == *'fedora'* ]]; then
         sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg;
     else
         sudo grub2-mkconfig -o "$(readlink -e /etc/grub2-efi.cfg)";
@@ -109,10 +114,7 @@ grub-update(){
 }
 update-all(){
     sudo flatpak update -y;
-    sudo snap refresh;
     sudo dnf upgrade --refresh -y;
-    sdk update;
-    sdk upgrade;
     sudo fwupdmgr update;
     cd $ZSH_PLUGINS;
     ls -d */ | xargs -I{} git -C {} reset --hard;
@@ -126,7 +128,6 @@ clean-all(){
     sudo dnf remove --oldinstallonly -y;
     sudo dnf clean all -y;
     flatpak uninstall --unused;
-    sdk flush;
     sudo journalctl --rotate --vacuum-size=500M;
     rm -rf ~/.thumbnails/*
     rm -rf ~/.wget-hsts;

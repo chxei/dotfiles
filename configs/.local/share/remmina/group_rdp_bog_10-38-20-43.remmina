@@ -87,3 +87,4 @@ sound=off
 keyboard_grab=1
 window_height=480
 window_width=640
+scale=1

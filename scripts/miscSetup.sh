@@ -23,7 +23,7 @@ if [[ $misc == *'bibata-oil'* ]]; then
     tar xvzf Bibata-Modern-Classic.tar.gz;
     sudo mv Bibata-* /usr/share/icons/;
     cd ~;
-    kwriteconfig5 --file ~/.config/kcminputrc --group Mouse --key cursorTheme "Bibata-Modern-Classic";
+    # kwriteconfig5 --file ~/.config/kcminputrc --group Mouse --key cursorTheme "Bibata-Modern-Classic";
 fi
 
 
@@ -31,28 +31,15 @@ fi
 #theme dependencies
 sudo dnf install materia-kde kvantum -y;
 
-##parachute
-cd ~/temp;
-git clone https://github.com/tcorreabr/Parachute.git;
-cd Parachute;
-kpackagetool5 --type KWin/Script --install . || kpackagetool5 --type KWin/Script --upgrade .;
-mkdir -p ~/.local/share/kservices5;
-ln -s ~/.local/share/kwin/scripts/Parachute/metadata.desktop ~/.local/share/kservices5/Parachute.desktop;
-
-##parachute togler for window edges
-cd ~/temp;
-git clone https://gitlab.com/divinae/toogleparachute.git;
-cd toogleparachute;
-kpackagetool5 --type KWin/Script --install . || kpackagetool5 --type KWin/Script --upgrade .;
-
 #tela icon theme
 install-tella(){
     cd ~/temp;
     git clone https://github.com/vinceliuice/Tela-icon-theme.git;
-    wget -qO- https://git.io/papirus-icon-theme-uninstall | sh;
+    wget -qO- https://git.io/papirus-icon-theme-install | sh;
     cd Tela-icon-theme;
     ./install.sh -n black;
-    cd ~;}
+    cd ~;
+}
 
 
 case $browser in
@@ -68,7 +55,6 @@ gpgcheck=1
 gpgkey=https://rpm.opera.com/rpmrepo.key
 enabled=1
 RPMREPO
-        sudo dnf upgrade -y --refresh;
         sudo dnf install opera-stable -y;
         cd ~/temp;
         sudo mkdir /usr/lib64/opera/lib_extra -p;
@@ -80,27 +66,15 @@ RPMREPO
     ungoogled-chromium)
         sudo dnf install chromium-browser-privacy;;
     chrome)
-        sudo dnf config-manager --set-enabled google-chrome;
         sudo dnf install google-chrome-stable -y;;
     firefox)
         sudo dnf install firefox;;
 esac;
 
 
-#tela icon theme
-install-tella(){
-    cd ~/temp;
-    git clone https://github.com/vinceliuice/Tela-icon-theme.git;
-    wget -qO- https://git.io/papirus-icon-theme-uninstall | sh;
-    cd Tela-icon-theme;
-    ./install.sh -n black;
-    cd ~;
-}
-
-
 for file in "${configFiles[@]}"; do
     cd "$baseDir/configs/";
-    cp -r --parents "$file" "$HOME" 
+    cp -r --parents "$file" "$HOME"
 done
 
 chmod +x ~/.config/conky/startup.sh
