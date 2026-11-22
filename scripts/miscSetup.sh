@@ -42,15 +42,6 @@ case $browser in
         #opera
         sudo rpm --import https://rpm.opera.com/rpmrepo.key;
         sudo sh -c 'echo -e "[opera]\nname=Opera packages\ntype=rpm-md\nbaseurl=https://rpm.opera.com/rpm\nenabled=1\ngpgcheck=1\ngpgkey=https://rpm.opera.com/rpmrepo.key" > /etc/yum.repos.d/opera.repo';
-# sudo tee /etc/yum.repos.d/opera.repo <<RPMREPO
-# [opera]
-# name=Opera packages
-# type=rpm-md
-# baseurl=https://rpm.opera.com/rpm
-# gpgcheck=1
-# gpgkey=https://rpm.opera.com/rpmrepo.key
-# enabled=1
-# RPMREPO
         sudo dnf install opera-stable -y;
         cd ~/temp;
         sudo mkdir /usr/lib64/opera/lib_extra -p;

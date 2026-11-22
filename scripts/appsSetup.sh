@@ -59,18 +59,6 @@ installVscode(){
     sudo dnf install code -y;
 }
 
-installTidalDl(){
-    cd ~/temp/;
-    pip3 install tidal-dl --upgrade
-    pip3 install tidal-gui --upgrade
-}
-
-
-installGzdoom(){
-    sudo dnf copr enable nalika/gzdoom -y;
-    sudo dnf install gzdoom -y;
-}
-
 installVirtualBox(){
     sudo dnf install VirtualBox kernel-devel akmod-VirtualBox VirtualBox-guest-additions -y; #failed kernel-devel
     sudo akmods;
