@@ -1,17 +1,26 @@
-curl https://cli-assets.heroku.com/install.sh | sh;
-
-sudo dnf install -y https://dbeaver.com/files/dbeaver-ee-latest-stable.x86_64.rpm;
-
-flatpak install flatseal slack otpclient org.onlyoffice -y;
+flatpak install slack otpclient org.onlyoffice com.github.PintaProject.Pinta \
+fr.romainvigier.MetadataCleaner com.google.AndroidStudio com.github.huluti.Curtail com.mastermindzh.tidal-hifi \
+com.github.qarmin.czkawka com.stremio.Stremio com.anydesk.Anydesk com.github.tchx84.Flatseal hu.irl.cameractrls net.agalwood.Motrix one.ablaze.floorp org.telegram.desktop -y;
 
 sudo pip3 install https://github.com/dlenski/vpn-slice/archive/master.zip;
 
 sudo dnf copr enable taw/joplin -y;
+sudo dnf copr enable atim/bottom -y;
 
-sudo dnf install remmina steam foliate keepassxc conky VirtualBox joplin discord stoken-cli\
-smplayer smplayer-themes \
-nextcloud nextcloud-client nextcloud-client-dolphin -y;
+sudo sh -c 'echo -e "[charm]\nname=Charm\nbaseurl=https://repo.charm.sh/yum/\nenabled=1\ngpgcheck=0" > /etc/yum.repos.d/charm.repo';
 
-sudo dnf install 'tlp*';
-sudo systemctl mask systemd-rfkill.socket;
-sudo tlp start;
+
+sudo dnf install remmina steam foliate keepassxc conky VirtualBox joplin discord stoken-cli \
+smplayer smplayer-themes mplayer \
+ShellCheck stress gwe pipewire-codec-aptx bottom zpaq qalc microcode_ctl strawberry micro \
+glow \
+mangohud goverlay -y;
+#nextcloud nextcloud-client nextcloud-client-dolphin
+
+
+# asus
+sudo dnf copr enable lukenukem/asus-linux -y;
+sudo dnf install asusctl -y;
+sudo systemctl daemon-reload && systemctl restart asusd;
+sudo systemctl enable supergfxd;
+sudo systemctl start supergfxd;

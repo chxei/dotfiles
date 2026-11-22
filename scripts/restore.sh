@@ -68,12 +68,13 @@ clear;
 
 source $baseDir/scripts/preSetup.sh;
 
-if [[ $nvidia=='yes' ]]; then
+if [[ $nvidia == 'yes' ]]; then
     sudo dnf remove xorg-x11-drv-nouveau -y;
     sudo dnf install akmod-nvidia vulkan vulkan-loader vdpauinfo libva-vdpau-driver libva-utils xorg-x11-drv-nvidia-cuda-libs xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-power -y;
     sudo akmods --force;
     sudo dracut --force;
-    sudo grubby --update-kernel=ALL --args='rd.driver.blacklist=nouveau modprobe.blacklist=nouveau rhgb quiet nvidia-drm.modeset=1 mitigations=off';
+    sudo grubby --update-kernel=ALL --args='amdgpu.freesync_video=1 rd.driver.blacklist=nouveau modprobe.blacklist=nouveau rhgb quiet nvidia-drm.modeset=1 mitigations=off selinux=0';
+    sudo systemctl reenable nvidia-{suspend,resume,hibernate};
 fi
 
 for key in $(jq '.[] | map(select(.state == "on")) | keys | .[]' $baseDir/appsList.json); do

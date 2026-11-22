@@ -3,23 +3,17 @@
 
 #hosts
 if [[ $misc == *'hosts'* ]]; then
-    sudo rm -rf /etc/hosts;
-    sudo wget -P /etc "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts";
-fi
-
-#keychron
-if [[ $misc == *'keychron-fix'* ]]; then
-    sudo wget -P /etc/systemd/system https://raw.githubusercontent.com/adam-savard/keychron-k2-function-keys-linux/master/script/keychron.service;
-    sudo systemctl enable keychron;
-    sudo systemctl start keychron;
+    sudo gio trash -f /etc/hosts;
+    sudo wget -P /etc "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts";
+    sudo systemctl restart NetworkManager.service;
 fi
 
 
 #cursor bibata classic
 if [[ $misc == *'bibata-oil'* ]]; then
     cd ~/temp;
-    latestffmpegversion=$(git ls-remote --tags https://github.com/ful1e5/Bibata_Cursor.git | tail -n 1 | cut -d/ -f3-);
-    wget -qo - https://github.com/ful1e5/Bibata_Cursor/releases/download/$latestffmpegversion/Bibata-Modern-Classic.tar.gz;
+    latestversion=$(git ls-remote --tags https://github.com/ful1e5/Bibata_Cursor.git | tail -n 1 | cut -d/ -f3-);
+    wget -qo - https://github.com/ful1e5/Bibata_Cursor/releases/download/$latestversion/Bibata-Modern-Classic.tar.gz;
     tar xvzf Bibata-Modern-Classic.tar.gz;
     sudo mv Bibata-* /usr/share/icons/;
     cd ~;
@@ -35,26 +29,28 @@ sudo dnf install materia-kde kvantum -y;
 install-tella(){
     cd ~/temp;
     git clone https://github.com/vinceliuice/Tela-icon-theme.git;
-    wget -qO- https://git.io/papirus-icon-theme-install | sh;
+#     wget -qO- https://git.io/papirus-icon-theme-install | sh;
     cd Tela-icon-theme;
-    ./install.sh -n black;
+    ./install.sh -c black -n black;
     cd ~;
 }
+
 
 
 case $browser in
     opera)
         #opera
         sudo rpm --import https://rpm.opera.com/rpmrepo.key;
-sudo tee /etc/yum.repos.d/opera.repo <<RPMREPO
-[opera]
-name=Opera packages
-type=rpm-md
-baseurl=https://rpm.opera.com/rpm
-gpgcheck=1
-gpgkey=https://rpm.opera.com/rpmrepo.key
-enabled=1
-RPMREPO
+        sudo sh -c 'echo -e "[opera]\nname=Opera packages\ntype=rpm-md\nbaseurl=https://rpm.opera.com/rpm\nenabled=1\ngpgcheck=1\ngpgkey=https://rpm.opera.com/rpmrepo.key" > /etc/yum.repos.d/opera.repo';
+# sudo tee /etc/yum.repos.d/opera.repo <<RPMREPO
+# [opera]
+# name=Opera packages
+# type=rpm-md
+# baseurl=https://rpm.opera.com/rpm
+# gpgcheck=1
+# gpgkey=https://rpm.opera.com/rpmrepo.key
+# enabled=1
+# RPMREPO
         sudo dnf install opera-stable -y;
         cd ~/temp;
         sudo mkdir /usr/lib64/opera/lib_extra -p;
@@ -77,7 +73,6 @@ for file in "${configFiles[@]}"; do
     cp -r --parents "$file" "$HOME"
 done
 
-chmod +x ~/.config/conky/startup.sh
 
 if [[ $icontheme == *'breeze-dark'* ]]; then
     /usr/libexec/plasma-changeicons breeze-dark;

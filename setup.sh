@@ -1,14 +1,14 @@
 #!/bin/bash
 baseDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 #baseDir="$(dirname "$(readlink -f "$0")")"
-sudo dnf install dialog jq -y;
+sudo dnf install dialog jq git -y;
 
 configFiles=('.config/zsh' '.config/autostart' '.config/conky' '.config/dolphinrc' '.config/katerc' '.config/kcminputrc' '.config/kded5rc' '.config/kdeglobals' \
             '.config/kglobalshortcutsrc' '.config/khotkeysrc' '.config/klipperrc' '.config/konsolerc' '.config/kscreenlockerrc' \
             '.config/kservicemenurc' '.config/ksplashrc' '.config/kwinrc' '.config/kxkbrc' '.config/mimeapps.list' '.config/plasma-org.kde.plasma.desktop-appletsrc' \
             '.config/plasmarc' '.config/plasmashellrc' '.config/powermanagementprofilesrc' '.kde/share/config/kdeglobals' \
             '.config/xsettingsd' '.config/smplayer/playlist.ini' '.config/smplayer/smplayer.ini' '.config/conky' '.config/remmina' '.local/share/remmina' \
-            '.local/share/cod')
+            '.local/share/cod' '.config/stoken/settings')
 
 action=$(dialog --no-items --radiolist 'do you want to backup or restore' 11 30 11 \
 'backup' 'on' \

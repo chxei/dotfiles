@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Exec=/run/media/chxei/data/bin/ungoogled-chromium/chrome %u
+MimeType=text/html;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;application/x-mimearchive;
+Name=chrome
+NoDisplay=true
+Type=Application
+#/usr/share/applications/chrome.desktop
