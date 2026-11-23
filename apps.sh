@@ -7,7 +7,14 @@ sudo pip3 install https://github.com/dlenski/vpn-slice/archive/master.zip;
 sudo dnf copr enable taw/joplin -y;
 sudo dnf copr enable atim/bottom -y;
 
-sudo sh -c 'echo -e "[charm]\nname=Charm\nbaseurl=https://repo.charm.sh/yum/\nenabled=1\ngpgcheck=0" > /etc/yum.repos.d/charm.repo';
+sudo tee /etc/yum.repos.d/charm.repo >/dev/null <<'EOF' || exit 1
+[charm]
+name=Charm
+baseurl=https://repo.charm.sh/yum/
+enabled=1
+gpgcheck=1
+gpgkey=https://repo.charm.sh/yum/gpg.key
+EOF
 
 
 sudo dnf install steam foliate keepassxc conky VirtualBox joplin discord \
