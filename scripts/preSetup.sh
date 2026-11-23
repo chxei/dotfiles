@@ -56,7 +56,7 @@ sudo dnf upgrade -y --refresh;
 
 #some usefull apps
 sudo dnf install \
-plasma-browser-integration fwupd htop git neofetch fzf filelight qbittorrent gparted seahorse exa bleachbit \
+plasma-browser-integration fwupd htop git neofetch fzf filelight qbittorrent gparted seahorse eza bleachbit \
 jetbrains-mono-fonts-all fira-code-fonts simplescreenrecorder \
 dnf-plugins-core dnf-plugin-system-upgrade screen \
 redhat-lsb-core lm_sensors kate ffmpeg kernel-tools bat fd-find adb inxi \
