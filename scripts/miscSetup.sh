@@ -77,5 +77,5 @@ elif [[ $theme == *'breezetwilight'* ]]; then
 elif [[ $theme == *'materialight'* ]]; then
     lookandfeeltool -a 'com.github.varlesh.materia-light'
 elif [[ $theme == *'materiadark'* ]]; then
-    lookandfeeltool -a 'ocom.github.varlesh.materia-dark'
+    lookandfeeltool -a 'com.github.varlesh.materia-dark'
 fi
