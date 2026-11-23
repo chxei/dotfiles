@@ -7,8 +7,8 @@ alias cp="cp -i"                                                # Confirm before
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
-alias exa='exa --time-style=long-iso --git --icons --classify --group-directories-first --group -lbhHigUmuSa'
-alias tree='exa --tree'
+alias eza='eza --time-style=long-iso --git --icons --classify --group-directories-first --group -lbhHigUmuSa'
+alias tree='eza --tree'
 alias ll='ls -allh'
 alias ls='ls -h --color=auto'
 alias pacpurge='sudo pacman -Rsn $(pacman -Qdtq)'
@@ -116,10 +116,17 @@ update-all(){
     sudo flatpak update -y;
     sudo dnf upgrade --refresh -y;
     sudo fwupdmgr update;
-    cd $ZSH_PLUGINS;
-    ls -d */ | xargs -I{} git -C {} reset --hard;
-    ls -d */ | xargs -I{} git -C {} pull;
-    cd ~;
+    if [[ ! -d $ZSH_PLUGINS ]]; then
+        print -u2 -- "Missing Zsh plugin directory: $ZSH_PLUGINS"
+        return 1
+    fi
+    local plugin
+    for plugin in "$ZSH_PLUGINS"/*(N/); do
+        [[ -e "$plugin/.git" ]] || continue
+        git -C "$plugin" fetch || return 1
+        git -C "$plugin" reset --hard '@{upstream}' || return 1
+        git -C "$plugin" clean -fd || return 1
+    done
     grub-update;
 }
 clean-all(){
