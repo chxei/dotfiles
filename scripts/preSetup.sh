@@ -51,7 +51,7 @@ sudo systemctl disable abrtd.service abrt-journal-core.service abrt-oops.service
 # enable rpmfusion
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y;
 sudo dnf install rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted fedora-workstation-repositories -y;
-sudo dnf config-manager --set-enabled google-chrome;
+sudo dnf config-manager enable google-chrome;
 sudo dnf upgrade -y --refresh;
 
 #some usefull apps
