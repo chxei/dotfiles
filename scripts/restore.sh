@@ -68,11 +68,11 @@ clear;
 source $baseDir/scripts/preSetup.sh;
 
 if [[ $nvidia == 'yes' ]]; then
-    sudo dnf remove xorg-x11-drv-nouveau -y;
-    sudo dnf install akmod-nvidia vulkan vulkan-loader vdpauinfo libva-vdpau-driver libva-utils xorg-x11-drv-nvidia-cuda-libs xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-power -y;
+    sudo dnf install akmod-nvidia vulkan vulkan-loader vdpauinfo libva-vdpau-driver libva-utils xorg-x11-drv-nvidia-cuda-libs xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-power -y || return 1;
     sudo akmods --force;
+    sudo dnf remove xorg-x11-drv-nouveau -y;
     sudo dracut --force;
-    sudo grubby --update-kernel=ALL --args='nvidia-drm.modeset=1 pcie_aspm=off nvidia.NVreg_PreserveVideoMemoryAllocations=1'
+    sudo grubby --update-kernel=ALL --args='nvidia-drm.modeset=1 pcie_aspm=off nvidia.NVreg_PreserveVideoMemoryAllocations=1';
     #experimental, not stable
     #sudo grubby --update-kernel=ALL --args='mitigations=off selinux=0'
     sudo systemctl reenable nvidia-{suspend,resume,hibernate};
