@@ -48,7 +48,6 @@ clear;
 misc=$(dialog --checklist 'Choose cursor theme. Hit cencel to stick with fedoras default icons' 20 100 20 \
 'bibata-oil' 'modern cursor theme' 'on' \
 'hosts' 'apply system wide, hosts based adblocker' 'on' \
-'keychron-fix' 'use only if you have keychrons wireless keyboard' 'off' \
 --output-fd 1
 );
 
