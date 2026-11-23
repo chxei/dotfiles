@@ -39,17 +39,7 @@ install-tella(){
 
 case $browser in
     opera)
-        #opera
-        sudo rpm --import https://rpm.opera.com/rpmrepo.key;
-        sudo sh -c 'echo -e "[opera]\nname=Opera packages\ntype=rpm-md\nbaseurl=https://rpm.opera.com/rpm\nenabled=1\ngpgcheck=1\ngpgkey=https://rpm.opera.com/rpmrepo.key" > /etc/yum.repos.d/opera.repo';
-        sudo dnf install opera-stable -y;
-        cd ~/temp;
-        sudo mkdir /usr/lib64/opera/lib_extra -p;
-        latestffmpegversion=$(git ls-remote --tags https://github.com/iteufel/nwjs-ffmpeg-prebuilt.git | tail -n 1 | cut -d/ -f3-);
-        wget -qo - https://github.com/iteufel/nwjs-ffmpeg-prebuilt/releases/download/$latestffmpegversion/$latestffmpegversion-linux-x64.zip;
-        unzip $latestffmpegversion-linux-x64.zip;
-        sudo cp libffmpeg.so /usr/lib64/opera/lib_extra/libffmpeg.so;
-        cd ~;;
+        flatpak install --system flathub com.opera.Opera;;
     ungoogled-chromium)
         sudo dnf install chromium-browser-privacy;;
     chrome)
