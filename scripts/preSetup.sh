@@ -9,7 +9,6 @@ echo XAUTHORITY DEFAULT="\${XDG_RUNTIME_DIR}/Xauthority" | sudo tee -a /etc/secu
 
 echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/$USER; #allow current user executing sudo without passhord
 echo "net.core.default_qdisc=fq" | sudo tee -a /etc/sysctl.conf;
-echo "net.ipv4.tcp_congestion_control=bbr" | sudo tee -a /etc/sysctl.conf;
 echo "FallbackDNS=8.8.8.8 8.8.4.4" | sudo tee -a /etc/systemd/resolved.conf;
 echo "DNS=9.9.9.9" | sudo tee -a /etc/systemd/resolved.conf;
 git config --global init.defaultBranch main; #get rid off silly warning about branch name
@@ -23,7 +22,9 @@ mkdir -p /home/$USER/.config/simplescreenrecorder/;
 mkdir -p /home/$USER/.config/nvidia/;
 
 sudo cpupower frequency-set -g schedutil;
-sudo sysctl -w net.ipv4.tcp_congestion_control=bbr2; #failed sysctl: setting key "net.ipv4.tcp_congestion_control": No such file or directory
+
+# echo "net.ipv4.tcp_congestion_control=bbr" | sudo tee -a /etc/sysctl.conf; #experimental not stable
+# sudo sysctl -w net.ipv4.tcp_congestion_control=bbr2; #failed sysctl: setting key "net.ipv4.tcp_congestion_control": No such file or directory #experimental not stable
 
 #cleanups
 sudo dnf remove Yakuake firefox dragon kmahjongg kpat kmines kolourpaint kmail konversation kruler krdc krfb kcolorchooser akregator kmousetool ktorrent kgames -y;
