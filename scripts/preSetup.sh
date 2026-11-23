@@ -30,7 +30,6 @@ sudo cpupower frequency-set -g schedutil;
 sudo dnf remove Yakuake firefox dragon kmahjongg kpat kmines kolourpaint kmail konversation kruler krdc krfb kcolorchooser akregator kmousetool ktorrent kgames -y;
 sudo dnf remove k3b kamoso calligra-core kaddressbook korganizer kcharselect kmouth kwrite kmag dnfdragora krusader juk falkon PackageKit PackageKit-glib -y;
 sudo dnf remove 'libreoffice*' -y;
-sudo dnf remove 'vlc*' -y;
 sudo dnf remove 'plasma-discover-*' -y;
 sudo dnf install flatpak -y;
 
@@ -60,7 +59,7 @@ sudo dnf install \
 plasma-browser-integration fwupd htop git neofetch fzf filelight qbittorrent gparted seahorse eza bleachbit \
 jetbrains-mono-fonts-all fira-code-fonts simplescreenrecorder \
 dnf-plugins-core dnf-plugin-system-upgrade screen \
-redhat-lsb-core lm_sensors kate ffmpeg kernel-tools bat fd-find adb inxi \
+lm_sensors kate ffmpeg vlc kernel-tools bat fd-find adb inxi \
 llvm-static.x86_64 llvm-libs llvm-libs lld llvm clang-devel clang gcc glibc-devel zlib-devel libstdc++-static go cargo \
 python3-pip python3 python3-devel python3-dnf-plugin-post-transaction-actions -y;
 
