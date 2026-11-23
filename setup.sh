@@ -8,7 +8,7 @@ configFiles=('.config/zsh' '.config/autostart' '.config/conky' '.config/dolphinr
             '.config/kservicemenurc' '.config/ksplashrc' '.config/kwinrc' '.config/kxkbrc' '.config/mimeapps.list' '.config/plasma-org.kde.plasma.desktop-appletsrc' \
             '.config/plasmarc' '.config/plasmashellrc' '.config/powermanagementprofilesrc' '.kde/share/config/kdeglobals' \
             '.config/xsettingsd' '.config/conky' \
-            '.local/share/cod' '.config/stoken/settings')
+            '.local/share/cod')
 
 action=$(dialog --no-items --radiolist 'do you want to backup or restore' 11 30 11 \
 'backup' 'on' \

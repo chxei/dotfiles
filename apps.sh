@@ -10,7 +10,7 @@ sudo dnf copr enable atim/bottom -y;
 sudo sh -c 'echo -e "[charm]\nname=Charm\nbaseurl=https://repo.charm.sh/yum/\nenabled=1\ngpgcheck=0" > /etc/yum.repos.d/charm.repo';
 
 
-sudo dnf install steam foliate keepassxc conky VirtualBox joplin discord stoken-cli \
+sudo dnf install steam foliate keepassxc conky VirtualBox joplin discord \
 ShellCheck stress gwe pipewire-codec-aptx bottom zpaq qalc microcode_ctl strawberry micro \
 glow \
 mangohud goverlay -y;
