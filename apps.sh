@@ -1,5 +1,5 @@
-flatpak install slack otpclient org.onlyoffice com.github.PintaProject.Pinta \
-fr.romainvigier.MetadataCleaner com.google.AndroidStudio com.github.huluti.Curtail com.mastermindzh.tidal-hifi \
+flatpak install slack otpclient org.onlyoffice.desktopeditors com.github.PintaProject.Pinta \
+io.gitlab.metadatacleaner.metadatacleaner com.google.AndroidStudio com.github.huluti.Curtail com.mastermindzh.tidal-hifi \
 com.github.qarmin.czkawka com.stremio.Stremio com.anydesk.Anydesk com.github.tchx84.Flatseal hu.irl.cameractrls net.agalwood.Motrix one.ablaze.floorp org.telegram.desktop -y;
 
 sudo pip3 install https://github.com/dlenski/vpn-slice/archive/master.zip;
@@ -15,11 +15,3 @@ ShellCheck stress gwe pipewire-codec-aptx bottom zpaq qalc microcode_ctl strawbe
 glow \
 mangohud goverlay -y;
 #nextcloud nextcloud-client nextcloud-client-dolphin
-
-
-# asus
-sudo dnf copr enable lukenukem/asus-linux -y;
-sudo dnf install asusctl -y;
-sudo systemctl daemon-reload && systemctl restart asusd;
-sudo systemctl enable supergfxd;
-sudo systemctl start supergfxd;
