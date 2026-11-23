@@ -12,8 +12,10 @@ echo "net.core.default_qdisc=fq" | sudo tee -a /etc/sysctl.conf;
 echo "net.ipv4.tcp_congestion_control=bbr" | sudo tee -a /etc/sysctl.conf;
 echo "FallbackDNS=8.8.8.8 8.8.4.4" | sudo tee -a /etc/systemd/resolved.conf;
 echo "DNS=9.9.9.9" | sudo tee -a /etc/systemd/resolved.conf;
-git config --global init.defaultBranch main #get rid off silly warning about branch name
-git config --global push.autoSetupRemote true #auto setup remote repo if not exist
+git config --global init.defaultBranch main; #get rid off silly warning about branch name
+git config --global push.autoSetupRemote true; #auto setup remote repo if not exist
+git config --global user.email "chxei5667@gmail.com";
+git config --global user.name "chxei";
 
 mkdir ~/temp; #
 mkdir -p ~/.local/bin/;
