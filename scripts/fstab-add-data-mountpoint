@@ -3,32 +3,31 @@ set -eu
 
 target=/run/media/chxei/data
 source=PARTLABEL=data
-entry="$source $target ext4 rw,users,exec 0 0"
+options=rw,users,exec
+entry="$source $target ext4 $options 0 0"
 
 if [ "$(blkid -p -s TYPE -o value /dev/disk/by-partlabel/data)" != ext4 ]; then
-    echo "Expected an ext4 partition with PARTLABEL=data. Check lsblk -o NAME,PARTLABEL,FSTYPE." >&2
+    echo "Expected an ext4 partition with PARTLABEL=data." >&2
     exit 1
 fi
 
-if mountpoint -q "$target" && ! findmnt --mountpoint "$target" --source "$source" >/dev/null; then
-    echo "Another filesystem is mounted at $target." >&2
-    exit 1
-fi
-
-# Keep concurrent runs from both appending the same entry.
+# Lock the table so two runs cannot add the same entry.
 exec 9</etc/fstab
 flock -x 9
-if existing=$(findmnt --fstab --mountpoint "$target" --raw --noheadings \
-        --output SOURCE,TARGET,FSTYPE,OPTIONS,FREQ,PASSNO); then
-    if [ "$existing" != "$entry" ]; then
-        echo "Conflicting fstab entry for $target: $existing" >&2
-        exit 1
-    fi
-else
-    printf '\n%s\n' "$entry" | tee -a /etc/fstab
+mkdir -p "$target"
+findmnt --verify --tab-file /etc/fstab
+existing=$(findmnt --fstab --mountpoint "$target" --raw --noheadings \
+    --output SOURCE,TARGET,FSTYPE,OPTIONS,FREQ,PASSNO) || existing=
+if [ -n "$existing" ] && [ "$existing" != "$entry" ]; then
+    echo "Conflicting fstab entry for $target: $existing" >&2
+    exit 1
 fi
 
-mkdir -p "$target"
-systemctl daemon-reload
-mountpoint -q "$target" || mount "$target"
+# Verify the live mount before committing it to the boot configuration.
+mountpoint -q "$target" || mount -t ext4 -o "$options" "$source" "$target"
 findmnt --mountpoint "$target" --source "$source" --output SOURCE,TARGET,FSTYPE,OPTIONS
+
+if [ -z "$existing" ]; then
+    printf '\n%s\n' "$entry" >> /etc/fstab
+fi
+systemctl daemon-reload
