@@ -1,7 +1,7 @@
 [Added Associations]
 application/octet-stream=org.kde.kate.desktop;
 inode/directory=org.kde.dolphin.desktop;
-video/mp4=smplayer.desktop;
+video/mp4=smplayer.desktop; #todo: removed smplayer
 x-scheme-handler/http=ungoogled-chromium.desktop;/home/chxei/.local/share/applications/chrome.desktop;chrome.desktop;
 x-scheme-handler/https=ungoogled-chromium.desktop;/home/chxei/.local/share/applications/chrome.desktop;
 x-scheme-handler/mailto=opera.desktop;
@@ -9,7 +9,7 @@ x-scheme-handler/mailto=opera.desktop;
 [Default Applications]
 application/octet-stream=org.kde.kate.desktop;
 inode/directory=org.kde.dolphin.desktop;
-video/mp4=smplayer.desktop;
+video/mp4=smplayer.desktop; #todo: removed smplayer
 x-scheme-handler/arctype=arctype.desktop
 x-scheme-handler/http=ungoogled-chromium.desktop;
 x-scheme-handler/https=ungoogled-chromium.desktop;

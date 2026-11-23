@@ -11,7 +11,6 @@ sudo sh -c 'echo -e "[charm]\nname=Charm\nbaseurl=https://repo.charm.sh/yum/\nen
 
 
 sudo dnf install remmina steam foliate keepassxc conky VirtualBox joplin discord stoken-cli \
-smplayer smplayer-themes mplayer \
 ShellCheck stress gwe pipewire-codec-aptx bottom zpaq qalc microcode_ctl strawberry micro \
 glow \
 mangohud goverlay -y;
