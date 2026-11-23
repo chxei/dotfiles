@@ -73,7 +73,9 @@ if [[ $nvidia == 'yes' ]]; then
     sudo dnf install akmod-nvidia vulkan vulkan-loader vdpauinfo libva-vdpau-driver libva-utils xorg-x11-drv-nvidia-cuda-libs xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-power -y;
     sudo akmods --force;
     sudo dracut --force;
-    sudo grubby --update-kernel=ALL --args='amdgpu.freesync_video=1 rd.driver.blacklist=nouveau modprobe.blacklist=nouveau rhgb quiet nvidia-drm.modeset=1 mitigations=off selinux=0';
+    sudo grubby --update-kernel=ALL --args='nvidia-drm.modeset=1 pcie_aspm=off nvidia.NVreg_PreserveVideoMemoryAllocations=1'
+    #experimental, not stable
+    #sudo grubby --update-kernel=ALL --args='mitigations=off selinux=0'
     sudo systemctl reenable nvidia-{suspend,resume,hibernate};
 fi
 
